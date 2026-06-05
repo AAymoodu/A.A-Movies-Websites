@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mountains+of+Christmas:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --navigation-bar-bgcolor: #11101d;
+  --navigation-bar-link-bgcolor: #1d1b31;
+  --AAMovies-green: #42b883;
+  --AAMovies-orange: #ff9a3c;
+}
+
+#navigation {
+  /* Matches the darkest stop of your header gradient: rgba(8, 8, 18, 0.75) */
+  background-color: rgba(8, 8, 18, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+#NavigationBar {
+  flex-grow: unset;
+}
+#btn-togle {
+  background-image: linear-gradient(
+    to right,
+    rgba(66, 184, 131, 1),
+    rgba(116, 184, 96, 1),
+    rgba(163, 180, 64, 1),
+    rgba(210, 170, 47, 1),
+    rgba(255, 154, 60, 1)
+  );
+}
+#span1,
+.span1 {
+  font-family: "Mountains of Christmas", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #42b883;
+}
+#span2,
+.span2 {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #ff9a3c;
+}
+button#b0tton1 {
+  background-color: var(--AAMovies-orange);
+  border: 5px solid var(--AAMovies-orange);
+}
+button#b0tton2 {
+  background-color: var(--AAMovies-green);
+  border: 5px solid var(--AAMovies-green);
+}
+
+#Side-navigation,
+#Side-navigation-mobile {
+  background-color: var(--navigation-bar-bgcolor);
+  height: 100vh;
+  padding-left: 0;
+  padding-right: 0;
+  position: sticky;
+  top: 0;
+}
+
+#Side-navigation {
+  flex-grow: 0;
+}
+#Side-navigation ul,
+#Side-navigation-mobile ul {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 50rem;
+  overflow-y: scroll;
+  flex-wrap: nowrap;
+}
+#Side-navigation ul::-webkit-scrollbar,
+#Side-navigation-mobile ul::-webkit-scrollbar {
+  width: 1rem;
+}
+#Side-navigation ul::-webkit-scrollbar-track,
+#Side-navigation-mobile ul::-webkit-scrollbar-track {
+  background: var(--navigation-bar-bgcolor);
+  border-radius: 1rem;
+}
+#Side-navigation ul::-webkit-scrollbar-thumb,
+#Side-navigation-mobile ul::-webkit-scrollbar-thumb {
+  background: var(--navigation-bar-link-bgcolor);
+  border-radius: 1rem;
+}
+#Side-navigation ul::-webkit-scrollbar-thumb:hover,
+#Side-navigation-mobile ul::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(66, 184, 131, 1),
+    rgba(116, 184, 96, 1),
+    rgba(163, 180, 64, 1),
+    rgba(210, 170, 47, 1),
+    rgba(255, 154, 60, 1)
+  );
+}
+
+#Side-navigation.c00lapse ul {
+  overflow-x: hidden;
+  width: 6rem;
+}
+#Side-navigation ul li,
+#Side-navigation-mobile ul li {
+  display: flex;
+  align-items: center;
+  background-color: var(--navigation-bar-link-bgcolor);
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding-left: 1rem;
+  padding-right: 10rem;
+  text-wrap: nowrap;
+}
+#Side-navigation ul li a,
+#Side-navigation-mobile ul li a {
+  color: #ddd;
+}
+#Side-navigation ul li span,
+#Side-navigation-mobile ul li span {
+  width: 3px;
+  background-color: #11101d;
+  height: 4rem;
+  margin-left: 0.5rem;
+  /* margin-right: 0.rem; */
+}
+section#main-page {
+  flex-grow: 1;
+}
+
+
+/* bootstrap card styling */
+div.card {
+  width: fit-content;
+}
+div.card > a {
+  text-decoration: none;
+  color: white;
+}
+div.card-body {
+  padding: 0;
+}
+div.card-body > img {
+  width: 15rem;
+  height: 22.5rem;
+}
+div.card-footer {
+  font-size: 1.5rem;
+}
+
+
+/*  */
+div#Trending-section-grid {
+  display: grid;
+  /* grid-template-columns: repeat(3, 15rem); */
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  /* grid-template-rows: repeat(1, 1fr); */
+  column-gap: 1.5rem;
+  row-gap: 5rem;
+  justify-content: space-between;
+  justify-content: center;
+  justify-items: center;
+  /* place-items: center; */
+  margin-bottom: 4rem;
+  height: 26.5rem;
+  overflow-y: scroll;
+}
+
+div#Trending-section-grid::-webkit-scrollbar {
+  width: 1rem;
+}
+div#Trending-section-grid::-webkit-scrollbar-track {
+  background: var(--navigation-bar-bgcolor);
+  border-radius: 1rem;
+}
+div#Trending-section-grid::-webkit-scrollbar-thumb {
+  background: var(--navigation-bar-link-bgcolor);
+  border-radius: 1rem;
+}
+div#Trending-section-grid::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(66, 184, 131, 1),
+    rgba(116, 184, 96, 1),
+    rgba(163, 180, 64, 1),
+    rgba(210, 170, 47, 1),
+    rgba(255, 154, 60, 1)
+  );
+}
+
+.ShowMore:nth-child(13) {
+  grid-column: 2;
+}
+button#FindMore-btn1,
+button#FindMore-btn2,
+button#FindMore-btn3 {
+  width: 15.1rem;
+  height: 25.875rem;
+  font-size: 3rem;
+}
+
+div#Trending-Movies-section,
+div#Trending-Series-section {
+  display: flex;
+  gap: 4rem;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  padding-bottom: 3rem;
+}
+/* div#Trending-Movies-section::-webkit-scrollbar,
+div#Trending-Series-section::-webkit-scrollbar {
+  display: none;
+} */
+
+/* Width of the scrollbar */
+#Trending-Movies-section::-webkit-scrollbar,
+div#Trending-Series-section::-webkit-scrollbar {
+  height: 1rem; /* Horizontal scrollbar height */
+  /* Vertical scrollbar width */
+}
+
+/* Track */
+#Trending-Movies-section::-webkit-scrollbar-track,
+div#Trending-Series-section::-webkit-scrollbar-track {
+  background: var(--navigation-bar-bgcolor);
+  border-radius: 1rem;
+}
+
+/* Handle */
+#Trending-Movies-section::-webkit-scrollbar-thumb,
+div#Trending-Series-section::-webkit-scrollbar-thumb {
+  background: var(--navigation-bar-link-bgcolor);
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+#Trending-Movies-section::-webkit-scrollbar-thumb:hover,
+div#Trending-Series-section::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to right,
+    rgba(66, 184, 131, 1),
+    rgba(116, 184, 96, 1),
+    rgba(163, 180, 64, 1),
+    rgba(210, 170, 47, 1),
+    rgba(255, 154, 60, 1)
+  );
+}
+
+div#Trending-Movies-section .card,
+div#Trending-Series-section .card {
+  flex-shrink: 0;
+}
+
+footer#footer {
+  background-color: rgba(8, 8, 18, 0.5);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.mobile-view {
+  display: none;
+}
+@media (max-width: 1100px) {
+  #Side-navigation ul li,
+  #Side-navigation-mobile ul li {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-view {
+    display: none;
+  }
+  .mobile-view {
+    display: block;
+  }
+  .offcanvas-header {
+    background-color: var(--navigation-bar-bgcolor);
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  #Side-navigation-mobile ul li {
+    padding-right: 0;
+    padding: 0;
+  }
+  #Side-navigation-mobile ul li a {
+    color: #ddd;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  div.card-body > img {
+    width: 10rem;
+    height: 16.5rem;
+  }
+  div.card {
+  width: fit-content;
+  /* height: fit-content; */
+}
+ button#FindMore-btn2,
+button#FindMore-btn3{
+  height: auto;
+}
+}

@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mountains+of+Christmas:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --navigation-bar-bgcolor: #11101d;
+  --navigation-bar-link-bgcolor: #1d1b31;
+  --AAMovies-green: #42b883;
+  --AAMovies-orange: #ff9a3c;
+}
+
+#navigation {
+  /* Matches the darkest stop of your header gradient: rgba(8, 8, 18, 0.75) */
+  background-color: rgba(8, 8, 18, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+#NavigationBar {
+  flex-grow: unset;
+}
+#btn-togle {
+  background-image: linear-gradient(
+    to right,
+    rgba(66, 184, 131, 1),
+    rgba(116, 184, 96, 1),
+    rgba(163, 180, 64, 1),
+    rgba(210, 170, 47, 1),
+    rgba(255, 154, 60, 1)
+  );
+}
+#span1,
+.span1 {
+  font-family: "Mountains of Christmas", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #42b883;
+}
+#span2,
+.span2 {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #ff9a3c;
+}
+button#b0tton1 {
+  background-color: var(--AAMovies-orange);
+  border: 5px solid var(--AAMovies-orange);
+}
+button#b0tton2 {
+  background-color: var(--AAMovies-green);
+  border: 5px solid var(--AAMovies-green);
+}
+#Side-navigation,
+#Side-navigation-mobile {
+  background-color: var(--navigation-bar-bgcolor);
+  height: 100vh;
+  padding-left: 0;
+  padding-right: 0;
+  position: sticky;
+  top: 0;
+}
+
+#Side-navigation {
+  flex-grow: 0;
+}
+#Side-navigation ul,
+#Side-navigation-mobile ul {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 50rem;
+  overflow-y: scroll;
+  flex-wrap: nowrap;
+}
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--navigation-bar-bgcolor);
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--navigation-bar-link-bgcolor);
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(66, 184, 131, 1),
+    rgba(116, 184, 96, 1),
+    rgba(163, 180, 64, 1),
+    rgba(210, 170, 47, 1),
+    rgba(255, 154, 60, 1)
+  );
+}
+
+#Side-navigation.c00lapse ul {
+  overflow-x: hidden;
+  width: 6rem;
+}
+#Side-navigation ul li,
+#Side-navigation-mobile ul li {
+  display: flex;
+  align-items: center;
+  background-color: var(--navigation-bar-link-bgcolor);
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding-left: 1rem;
+  padding-right: 10rem;
+  text-wrap: nowrap;
+}
+#Side-navigation ul li a,
+#Side-navigation-mobile ul li a {
+  color: #ddd;
+}
+#Side-navigation ul li span,
+#Side-navigation-mobile ul li span {
+  width: 3px;
+  background-color: #11101d;
+  height: 4rem;
+  margin-left: 0.5rem;
+  /* margin-right: 0.rem; */
+}
+section#main-page {
+  flex-grow: 1;
+}
+/* This portion is for the Main page styling */
+div#Series_or_Movies_thumbnail img {
+  width: 18rem;
+  margin: 0 auto;
+  height: 100%;
+}
+
+#collapse_Content_Container{
+  font-size: 1.5rem;
+}
+#video_Container{
+  padding: 0.1rem;
+}
+video{
+  width: 100%;
+  height: auto;
+}
+
+#episode-links{
+  overflow-x: scroll;
+  /* width:100%; */
+}
+
+#episode-links ul{
+flex-wrap: nowrap;
+flex-shrink: 0;
+text-wrap: nowrap;
+}
+/* This portion is for the Main page styling */
+#comment-form{
+  font-size: 1.5rem;
+}
+
+#username{
+  height: 2.5rem;
+  font-size: 1.5rem;
+}
+#comment{
+  height: 8rem;
+  font-size: 1.5rem;
+}
+footer#footer {
+  background-color: rgba(8, 8, 18, 0.5);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.mobile-view {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  #Side-navigation ul li,
+  #Side-navigation-mobile ul li {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-view {
+    display: none;
+  }
+  .mobile-view {
+    display: block;
+  }
+  .offcanvas-header {
+    background-color: var(--navigation-bar-bgcolor);
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  #Side-navigation-mobile ul li {
+    padding-right: 0;
+    padding: 0;
+  }
+  #Side-navigation-mobile ul li a {
+    color: #ddd;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  div.card-body > img {
+    width: 10rem;
+    height: 16.5rem;
+  }
+
+  button#FindMore-btn2,
+  button#FindMore-btn3 {
+    height: auto;
+  }
+}

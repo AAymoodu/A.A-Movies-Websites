@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spider-Noir Watch</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="Spider-Noir.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body class="bg-dark text-light">
+    <header class="text-center">
+      <div class="my-0 rounded-3" id="navigation">
+        <!-- <div class="container "> -->
+        <nav class="px-lg-5 navbar navbar-expand">
+          <div class="container-fluid">
+            <!-- Navbar Brand 👇 -->
+            <div
+              class="navbar-brand text-light text-center d-flex align-items-center gap-5"
+            >
+              <!--  -->
+              <!--Desktop Side Nav button  -->
+              <button
+                onclick="collapseSideNav()"
+                id="hamburger"
+                class="btn btn-outline-light desktop-view"
+                style="font-size: 2.5rem"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+              <!--  -->
+              <!-- Mobile Side Nav Button -->
+              <button
+                id="hamburger2"
+                class="btn btn-outline-light mobile-view"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"
+                style="font-size: 2.5rem"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+              <div>
+                <a class="link-underline link-underline-opacity-0" href="#">
+                  <span id="span1" class="h1">A.A</span>
+                  <br />
+                  <span id="span2" class="h2">Movies</span>
+                </a>
+              </div>
+            </div>
+            <!-- Navbar Brand 👆 -->
+
+            <!-- Navbar toggle button👇 -->
+            <button
+              id="btn-togle"
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#NavigationBar"
+              aria-controls="NavigationBar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar toggle button 👆 -->
+
+            <div class="collapse navbar-collapse" id="NavigationBar">
+              <ul class="navbar nav gap-4">
+                <li class="nav-item">
+                  <i
+                    class="bi bi-person-circle"
+                    style="font-size: 5rem; color: var(--AAMovies-green)"
+                  ></i>
+                </li>
+                <!-- <button id="b0tton1" class="btn btn-primary b0tton">
+            <a class="nav-link text-light" href="./index.html#Sign-Up">Sign Up</a>
+            </button> -->
+                <!-- <li class="nav-item">
+            <button id="b0tton2" class="btn btn-primary b0tton">
+            <a class="nav-link text-light" href="#Log-In" target="blank">Login</a>
+            </button>
+        </li> -->
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- </div> -->
+      </div>
+    </header>
+
+    <main class="container-fluid row">
+      <!-- Side Navigation for Desktop devices👇 -->
+      <section class="col desktop-view" id="Side-navigation">
+        <ul class="nav flex-column gap-4">
+          <li class="nav-item">
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-home-50.png"
+              alt="Home-icon"
+            /><span></span><a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-search-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">Search</a>
+          </li>
+          <li class="nav-item">
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-favorite-folder-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">Favourites</a>
+          </li>
+          <li class="nav-item">
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-trending-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">Trending / Popular</a>
+          </li>
+          <li class="nav-item">
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-new-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">New Releases</a>
+          </li>
+
+          <li class="nav-item">
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-cinema-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">Movies</a>
+          </li>
+          <li class="nav-item">
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-tv-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">TV Shows / Series</a>
+          </li>
+
+          <li class="nav-item">
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-time-machine-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">History</a>
+          </li>
+        </ul>
+      </section>
+      <!-- Side Navigation for Desktop devices👆 -->
+      <!--  -->
+      <!--  -->
+      <!-- Side Navigation for Mobile and tablet devices👇👆 -->
+      <div
+        style="width: 75%"
+        class="offcanvas offcanvas-start p-0"
+        data-bs-scroll="true"
+        tabindex="-1"
+        id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel"
+      >
+        <div class="offcanvas-header">
+          <button
+            id="hamburger3"
+            class="btn btn-outline-light mobile-view"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+            style="font-size: 2.5rem"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+        </div>
+        <div class="offcanvas-body p-0">
+          <section id="Side-navigation-mobile">
+            <ul class="nav flex-column gap-2">
+              <li class="nav-item">
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-home-50.png"
+                  alt="Home-icon"
+                /><span></span><a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-search-50.png"
+                  alt=""
+                /><span></span><a class="nav-link" href="#">Search</a>
+              </li>
+              <li class="nav-item">
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-favorite-folder-50.png"
+                  alt=""
+                /><span></span><a class="nav-link" href="#">Favourites</a>
+              </li>
+              <li class="nav-item">
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-trending-50.png"
+                  alt=""
+                /><span></span
+                ><a class="nav-link" href="#">Trending / Popular</a>
+              </li>
+              <li class="nav-item">
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-new-50.png"
+                  alt=""
+                /><span></span><a class="nav-link" href="#">New Releases</a>
+              </li>
+
+              <li class="nav-item">
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-cinema-50.png"
+                  alt=""
+                /><span></span><a class="nav-link" href="#">Movies</a>
+              </li>
+              <li class="nav-item">
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-tv-50.png"
+                  alt=""
+                /><span></span
+                ><a class="nav-link" href="#">TV Shows / Series</a>
+              </li>
+
+              <li class="nav-item">
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-time-machine-50.png"
+                  alt=""
+                /><span></span><a class="nav-link" href="#">History</a>
+              </li>
+            </ul>
+          </section>
+
+          <p>
+            Try scrolling the rest of the page to see this option in action.
+          </p>
+        </div>
+      </div>
+      <!-- Side Navigation for Mobile and tablet devices👇👆 -->
+
+      <section class="col-4" id="main-page">
+        <div
+          class="card text-center rounded-top-4 bg-dark bg-gradient mt-5 mb-5"
+          id="Series_or_Movies_thumbnail"
+        >
+          <img
+            src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+            class="card-img-top"
+            alt=""
+          />
+          <div class="card-footer text-bg-secondary">
+            <h3>Spider-Noir</h3>
+          </div>
+        </div>
+
+        <!-- Movie or Series Description👇 -->
+        <button
+          class="btn btn-outline-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#Description"
+          aria-expanded="false"
+          aria-controls="Description"
+        >
+          <h3>Description</h3>
+        </button>
+        <div class="collapse" id="Description">
+          <div
+            class="card card-body text-bg-secondary my-4"
+            id="collapse_Content_Container"
+          >
+            <p>
+              Set in a gritty, Great Depression-era New York, the show centers
+              on Ben Reilly, an aging gumshoe struggling to balance his cynicism
+              with his innate spider-powers. Though he attempted to hang up his
+              mask and step away from being "The Spider" after failing to save
+              his girlfriend, Ruby, he soon finds himself on a collision course
+              with his old nemesis, the ruthless mob boss Silvermane (Brendan
+              Gleeson).
+            </p>
+
+            <p>
+              As Reilly investigates a series of seemingly straightforward
+              mysteries, he becomes entangled in a dangerous web involving
+              political corruption, an enigmatic femme fatale, and bizarre
+              body-horror experiments. The investigation forces Reilly to
+              confront the dark reality of his own origins—which tie back to a
+              World War I encounter with twisted German genetic experiments.
+            </p>
+
+            <p>🎬 Title: Spider-Noir</p>
+            <p>📅 Year: 2026</p>
+            <p>
+              🎭 Genre: Action, Adventure, Crime, Drama, Fantasy, Mystery,
+              Sci-Fi, Thriller
+            </p>
+            <p>📺 Type: TVSeries</p>
+            <p>🏳️ Country: United States</p>
+            <p>
+              💫 Stars: Nicolas Cage, Lamorne Morris, Abraham Popoola, Andrew
+              Lewis Caldwell, Brendan Gleeson, Jack Huston, Li Jun Li, Randy
+              Oglesby, Richard Robichaux, Karen Rodriguez
+            </p>
+            <p>🗣 Language: English</p>
+            <p>📄 Subtitle Language: English</p>
+            <p>
+              🌟 IMDB:
+              <a href="https://www.imdb.com/title/tt30460310"
+                >https://www.imdb.com/title/tt30460310</a
+              >
+            </p>
+          </div>
+        </div>
+        <!-- Movie or Series Description👆 -->
+
+        <h1 class="my-3">Now Watching:</h1>
+
+        <div class="card">
+          <div class="card-header" id="episode-links">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+              <!-- Episode 1 link 👇 -->
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="Spider-Noir_EP_01"
+                  data-bs-toggle="pill"
+                  data-bs-target="#Spider-Noir_EP_01_video"
+                  type="button"
+                  role="tab"
+                  aria-controls="Spider-Noir_EP_01_video"
+                  aria-selected="true"
+                >
+                  Ep-1
+                </button>
+              </li>
+              <!-- Episode 1 link 👆 -->
+
+              <!-- Episode 2 link 👇 -->
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="Spider-Noir_EP_02"
+                  data-bs-toggle="pill"
+                  data-bs-target="#Spider-Noir_EP_02_video"
+                  type="button"
+                  role="tab"
+                  aria-controls="Spider-Noir_EP_02_video"
+                  aria-selected="false"
+                >
+                  Ep-2
+                </button>
+              </li>
+              <!-- Episode 2 link 👆 -->
+
+              <!-- Episode 3 link 👇 -->
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="Spider-Noir_EP_03"
+                  data-bs-toggle="pill"
+                  data-bs-target="#Spider-Noir_EP_03_video"
+                  type="button"
+                  role="tab"
+                  aria-controls="Spider-Noir_EP_03_video"
+                  aria-selected="false"
+                >
+                  Ep-3
+                </button>
+              </li>
+              <!-- Episode 3 link 👆 -->
+
+              <!-- Episode 4 link 👇 -->
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="Spider-Noir_EP_04"
+                  data-bs-toggle="pill"
+                  data-bs-target="#Spider-Noir_EP_04_video"
+                  type="button"
+                  role="tab"
+                  aria-controls="Spider-Noir_EP_04_video"
+                  aria-selected="false"
+                >
+                  Ep-4
+                </button>
+              </li>
+              <!-- Episode 4 link 👆 -->
+
+              <!-- Episode 5 link 👇 -->
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="Spider-Noir_EP_05"
+                  data-bs-toggle="pill"
+                  data-bs-target="#Spider-Noir_EP_05_video"
+                  type="button"
+                  role="tab"
+                  aria-controls="Spider-Noir_EP_05_video"
+                  aria-selected="false"
+                >
+                  Ep-5
+                </button>
+              </li>
+              <!-- Episode 5 link 👆 -->
+
+              <!-- Episode 6 link 👇 -->
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="Spider-Noir_EP_06"
+                  data-bs-toggle="pill"
+                  data-bs-target="#Spider-Noir_EP_06_video"
+                  type="button"
+                  role="tab"
+                  aria-controls="Spider-Noir_EP_06_video"
+                  aria-selected="false"
+                >
+                  Ep-6
+                </button>
+              </li>
+              <!-- Episode 6 link 👆 -->
+
+              <!-- Episode 7 link 👇 -->
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="Spider-Noir_EP_07"
+                  data-bs-toggle="pill"
+                  data-bs-target="#Spider-Noir_EP_07_video"
+                  type="button"
+                  role="tab"
+                  aria-controls="Spider-Noir_EP_07_video"
+                  aria-selected="false"
+                >
+                  Ep-7
+                </button>
+              </li>
+              <!-- Episode 7 link 👆 -->
+
+              <!-- Episode 8 link 👇 -->
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="Spider-Noir_EP_08"
+                  data-bs-toggle="pill"
+                  data-bs-target="#Spider-Noir_EP_08_video"
+                  type="button"
+                  role="tab"
+                  aria-controls="Spider-Noir_EP_08_video"
+                  aria-selected="false"
+                >
+                  Ep-8
+                </button>
+              </li>
+              <!-- Episode 8 link 👆 -->
+            </ul>
+          </div>
+
+          <div class="card-body tab-content" id="video_Container">
+            <!-- Episode 1 video 👇 -->
+            <div
+              class="tab-pane fade show active"
+              id="Spider-Noir_EP_01_video"
+              role="tabpanel"
+              aria-labelledby="Spider-Noir_EP_01_video-tab"
+              tabindex="0"
+            >
+              <video controls>
+                <source
+                  src="https://vikingfile.com/d/LaLMKSEBlc/Spider-Noir%20S01E01%20%28SeriezLoaded.ng%29.mkv"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <!-- Episode 1 video 👆 -->
+
+            <!-- Episode 2 video 👇 -->
+            <div
+              class="tab-pane fade"
+              id="Spider-Noir_EP_02_video"
+              role="tabpanel"
+              aria-labelledby="Spider-Noir_EP_02_video-tab"
+              tabindex="0"
+            >
+              <video controls>
+                <source
+                  src="https://vikingfile.com/d/NQJS8b08lB/Spider-Noir%20S01E02%20%28SeriezLoaded.ng%29.mkv"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <!-- Episode 2 video 👆 -->
+
+            <!-- Episode 3 video 👇 -->
+            <div
+              class="tab-pane fade"
+              id="Spider-Noir_EP_03_video"
+              role="tabpanel"
+              aria-labelledby="Spider-Noir_EP_03_video-tab"
+              tabindex="0"
+            >
+              <video controls>
+                <source
+                  src="https://vikingfile.com/d/iNSdKlVGU1/Spider-Noir%20S01E03%20%28SeriezLoaded.ng%29.mkv"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <!-- Episode 3 video 👆 -->
+
+            <!-- Episode 4 video 👇 -->
+            <div
+              class="tab-pane fade"
+              id="Spider-Noir_EP_04_video"
+              role="tabpanel"
+              aria-labelledby="Spider-Noir_EP_04_video-tab"
+              tabindex="0"
+            >
+              <video controls>
+                <source
+                  src="https://vikingfile.com/d/82WLEWSMmk/Spider-Noir%20S01E04%20%28SeriezLoaded.ng%29.mkv"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <!-- Episode 4 video 👆 -->
+
+            <!-- Episode 5 video 👇 -->
+            <div
+              class="tab-pane fade"
+              id="Spider-Noir_EP_05_video"
+              role="tabpanel"
+              aria-labelledby="Spider-Noir_EP_05_video-tab"
+              tabindex="0"
+            >
+              <video controls>
+                <source
+                  src="https://vikingfile.com/d/rR5jrRQKKG/Spider-Noir%20S01E05%20%28SeriezLoaded.ng%29.mkv"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <!-- Episode 5 video 👆 -->
+
+            <!-- Episode 6 video 👇 -->
+            <div
+              class="tab-pane fade"
+              id="Spider-Noir_EP_06_video"
+              role="tabpanel"
+              aria-labelledby="Spider-Noir_EP_06_video-tab"
+              tabindex="0"
+            >
+              <video controls>
+                <source
+                  src="https://vikingfile.com/d/QrGvAksjHJ/Spider-Noir%20S01E06%20%28SeriezLoaded.ng%29.mkv"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <!-- Episode 6 video 👆 -->
+
+            <!-- Episode 7 video 👇 -->
+            <div
+              class="tab-pane fade"
+              id="Spider-Noir_EP_07_video"
+              role="tabpanel"
+              aria-labelledby="Spider-Noir_EP_07_video-tab"
+              tabindex="0"
+            >
+              <video controls>
+                <source
+                  src="https://vikingfile.com/d/VNZbws6K05/Spider-Noir%20S01E07%20%28SeriezLoaded.ng%29.mkv"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <!-- Episode 7 video 👆 -->
+
+            <!-- Episode 8 video 👇 -->
+            <div
+              class="tab-pane fade"
+              id="Spider-Noir_EP_08_video"
+              role="tabpanel"
+              aria-labelledby="Spider-Noir_EP_08_video-tab"
+              tabindex="0"
+            >
+              <video controls>
+                <source
+                  src="https://vikingfile.com/d/pCpZojk8lH/Spider-Noir%20S01E08%20%28SeriezLoaded.ng%29.mkv"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <!-- Episode 8 video 👆 -->
+          </div>
+          <div class="card-footer text-body-secondary">
+            <a class="btn btn-primary" href="">Reload</a>
+          </div>
+        </div>
+
+        <div class="card bg-warning container mt-4">
+          <div class="card-header">Featured</div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">
+              With supporting text below as a natural lead-in to additional
+              content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12 col-lg-2" id="comment-column">
+      <h1 class="my-5">Comment Section:</h1>
+
+      <form action="" class="d-flex flex-column" id="comment-form">
+        <label for="username">UserName</label>
+        <input class="mb-4" type="text" id="username" name="username">
+        
+        <label for="comment">Comment</label>
+        <textarea name="comment" id="comment"></textarea>
+
+        <button class="btn btn-primary w-50 my-4" type="submit">Post</button>
+      </form>
+      </section>
+    </main>
+
+    <footer id="footer" class="text-light py-5 mt-0">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Brand & Contact -->
+          <div class="col-md-4">
+            <h2 class="text-primary mb-3">
+              <span class="span1">A.A</span> <span class="span2">Movies</span>
+            </h2>
+            <p class="text-secondary">
+              Watch unlimited movies and shows anywhere, anytime.
+            </p>
+            <p class="small text-secondary mt-3">
+              Questions? Call 1-800-AA-MOVIES
+            </p>
+          </div>
+
+          <!-- Links Column 1 -->
+          <div class="col-6 col-md-2">
+            <h5 class="mb-3">Explore</h5>
+            <ul class="nav flex-column gap-2">
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0 text-secondary">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0 text-secondary">TV Shows</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0 text-secondary">New Releases</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Links Column 2 -->
+          <div class="col-6 col-md-2">
+            <h5 class="mb-3">Support</h5>
+            <ul class="nav flex-column gap-2">
+              <li class="nav-item">
+                <a href="#FAQ" class="nav-link p-0 text-secondary"
+                  >Help Center</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0 text-secondary">Account</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0 text-secondary">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter/Legal -->
+          <div class="col-md-4">
+            <h5 class="mb-3">Stay Updated</h5>
+            <!-- <div class="input-group mb-3">
+                              <input
+                                type="email"
+                                class="form-control bg-dark text-light border-secondary"
+                                placeholder="Email address"
+                              />
+                              <button class="btn btn-primary" type="button">Subscribe</button>
+                            </div> -->
+            <div class="mt-4">
+              <p class="small text-secondary mb-0">© 2026 A.A Movies, Inc.</p>
+              <a href="#" class="small text-secondary me-3 text-decoration-none"
+                >Terms</a
+              >
+              <a href="#" class="small text-secondary text-decoration-none"
+                >Privacy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="homepage.js"></script>
+    <script src="./JS/bootstrap.min.js"></script>
+  </body>
+</html>
+<!-- <video width="640" height="360" controls>
+<source src="https://vikingfile.com/d/LaLMKSEBlc/Spider-Noir%20S01E01%20%28SeriezLoaded.ng%29.mkv"
+type="video/webm">
+</video> -->

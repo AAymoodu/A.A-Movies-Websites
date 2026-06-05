@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mountains+of+Christmas:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+:root {
+  --faq-background-color: rgba(74, 74, 74, 1);
+  --AAMovies-green: #42b883;
+  --AAMovies-orange: #ff9a3c;
+  --Invalid-red: #ff2400;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  color: white;
+}
+body p {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+#navigation {
+  /* background-color: #3baea0; */
+  position: sticky;
+}
+#navigation {
+  /* Matches the darkest stop of your header gradient: rgba(8, 8, 18, 0.75) */
+  background-color: rgba(8, 8, 18, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+#NavigationBar {
+  flex-grow: unset;
+}
+#btn-togle {
+  background-image: linear-gradient(
+    to right,
+    rgba(66, 184, 131, 1),
+    rgba(116, 184, 96, 1),
+    rgba(163, 180, 64, 1),
+    rgba(210, 170, 47, 1),
+    rgba(255, 154, 60, 1)
+  );
+
+  /* background-color: #ff9a3c; */
+}
+#span1,
+.span1 {
+  font-family: "Mountains of Christmas", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #42b883;
+}
+#span2,
+.span2 {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #ff9a3c;
+}
+button#b0tton1 {
+  background-color: var(--AAMovies-orange);
+  border: 5px solid var(--AAMovies-orange);
+}
+button#b0tton2 {
+  background-color: var(--AAMovies-green);
+  border: 5px solid var(--AAMovies-green);
+}
+.b0tton a {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+  font-size: 1.5rem;
+}
+
+/* login form section styling */
+section#Log-In {
+  /* height: 100vh; */
+  width: 75%;
+  margin: 5rem auto;
+  /* border: 3px solid grey; */
+  border-radius: 1rem;
+  padding: 5rem 5%;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(127, 128, 129, 0.5),
+    rgba(94, 100, 110, 0.5),
+    rgba(65, 73, 91, 1),
+    rgba(41, 46, 71, 1),
+    rgba(21, 21, 51, 1)
+  );
+}
+section#Log-In h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+form#Form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+div.login-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+  div.login-inputs label {
+  font-size: 2rem;
+  cursor: pointer;
+}
+div.login-inputs.correct label {
+  color: var(--AAMovies-green);
+}
+div.login-inputs input {
+  height: 4.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  border: 4px solid var(--AAMovies-orange);
+  border-radius: 0.5rem;
+  /* text-align: center; */
+}
+
+div.login-inputs.correct input {
+  border: 4px solid var(--AAMovies-green);
+}
+div.login-inputs.invalid input {
+  border: 4px solid var(--Invalid-red);
+}
+
+.error {
+  color: var(--Invalid-red);
+  font-size: 1.8rem;
+}
+section#Log-In button#Submit {
+  /* height: 3.5rem; */
+  font-size: 2.5rem;
+  padding: 2.5rem auto;
+  background-color: var(--AAMovies-green);
+  border: 5px solid var(--AAMovies-green);
+}
+
+footer#footer {
+  background-color: rgba(8, 8, 18, 0.5);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+@media (min-width: 1025px) and (max-width: 2560px) {
+  section#Log-In {
+    width: 50%;
+  }
+}

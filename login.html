@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login to A.A Movies</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body class="bg-dark ">
+    <header class="text-center">
+      <div class="my-3 rounded-3" id="navigation">
+        <!-- <div class="container "> -->
+        <nav class="px-lg-5 navbar navbar-expand-md navbar-expand-lg">
+          <div class="container-fluid">
+            <!-- Navbar Brand 👇 -->
+            <a class="navbar-brand text-light text-center" href="#"><span id="span1" class="h1">A.A</span><br /><span
+                id="span2" class="h2">Movies</span>
+            </a>
+            <!-- Navbar Brand 👆 -->
+
+            <!-- Navbar toggle button👇 -->
+            <button id="btn-togle" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#NavigationBar" aria-controls="NavigationBar" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar toggle button 👆 -->
+            <div class="collapse navbar-collapse" id="NavigationBar">
+              <ul class="navbar nav gap-4">
+                <li class="nav-item">
+                  <button id="b0tton1" class="btn btn-primary b0tton">
+                    <a class="nav-link text-light" href="./index.html#Sign-Up">Sign Up</a>
+                  </button>
+                  <!-- <li><p>Or</p></li> -->
+                </li>
+                <li class="nav-item">
+                  <button id="b0tton2" class="btn btn-primary b0tton">
+                    <a class="nav-link text-light" href="#Log-In" target="blank">Login</a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- </div> -->
+      </div>
+    </header>
+
+    <!-- Log in Form Section👇 -->
+    <section id="Log-In" class="contain w-lg-25 w-md-25 px-lg-5">
+      <h1>Log In to Start Watching</h1>
+      <form action="" id="Form">
+        <!--  -->
+
+        <div class="login-inputs" id="email-login-input">
+          <label for="email">Email:</label>
+          <input id="email" type="email" autocomplete="on"/>
+          <p class="error" id="email-err"></p>
+        </div>
+
+        <!-- <div class="login-inputs">
+            <label for="username">Username:</label>
+            <input id="username" type="text" />
+          </div> -->
+
+        <div class="login-inputs" id="password-login-input">
+          <label for="password">Password:</label>
+          <input id="password" type="password" />
+          <p class="error" id="password-err"></p>
+          <button onclick="revealPassword()" id="reveal-password" class="w-25 btn btn-success btnNoDefault">Reveal
+            password</button>
+        </div>
+
+        <button id="Submit" class="btn btn-primary my-4" type="submit">
+          Login
+        </button>
+      </form>
+    </section>
+
+    <!-- Log in Form Section👆 -->
+     
+    <!-- Footer Section -->
+    <footer id="footer" class=" text-light py-5 mt-5">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Brand & Contact -->
+          <div class="col-md-4">
+            <h2 class="text-primary mb-3"><span class="span1">A.A</span> <span class="span2">Movies</span></h2>
+            <p class="text-secondary">
+              Watch unlimited movies and shows anywhere, anytime.
+            </p>
+            <p class="small text-secondary mt-3">
+              Questions? Call 1-800-AA-MOVIES
+            </p>
+          </div>
+
+          <!-- Links Column 1 -->
+          <div class="col-6 col-md-2">
+            <h5 class="mb-3">Explore</h5>
+            <ul class="nav flex-column gap-2">
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0 text-secondary">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0 text-secondary">TV Shows</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0 text-secondary">New Releases</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Links Column 2 -->
+          <div class="col-6 col-md-2">
+            <h5 class="mb-3">Support</h5>
+            <ul class="nav flex-column gap-2">
+              <li class="nav-item">
+                <a href="#FAQ" class="nav-link p-0 text-secondary">Help Center</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0 text-secondary">Account</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0 text-secondary">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter/Legal -->
+          <div class="col-md-4">
+            <h5 class="mb-3">Stay Updated</h5>
+            <!-- <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control bg-dark text-light border-secondary"
+                placeholder="Email address"
+              />
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div> -->
+            <div class="mt-4">
+              <p class="small text-secondary mb-0">© 2026 A.A Movies, Inc.</p>
+              <a href="#" class="small text-secondary me-3 text-decoration-none">Terms</a>
+              <a href="#" class="small text-secondary text-decoration-none">Privacy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="login.js"></script>
+    <script src="./JS/bootstrap.min.js"></script>
+  </body>
+
+</html>
