@@ -4,9 +4,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SignUp or Login</title>
+    <title>A.A Movies - SignUp or Login</title>
     <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="landing_page.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   </head>
 
   <body class="bg-dark">
@@ -241,14 +242,14 @@
             <label for="password">Password:</label>
             <input id="password" type="password" />
             <p class="error" id="password-err"></p>
-            <button onclick="revealPassword()" id="reveal-password" class="w-25 btn btn-success btnNoDefault">Reveal password</button>
+            <button onclick="revealPassword()" id="reveal-password" class=" p-1 btn btn-success btnNoDefault revealPasswords"><i class="bi bi-eye"></i></button>
           </div>
 
           <div class="signup-inputs" id="confirmpassword-signup-input">
             <label for="confirmpassword">Confirm Password:</label>
             <input id="confirmpassword" type="password" />
             <p class="error" id="confirmpassword-err"></p>
-            <button onclick="revealConfirmPassword()" id="reveal-confirmpassword" class="w-25 btn btn-success btnNoDefault">Reveal password</button>
+            <button onclick="revealConfirmPassword()" id="reveal-confirmpassword" class=" p-1 btn btn-success btnNoDefault revealPasswords"><i class="bi bi-eye"></i></button>
 
           </div>
           <button id="Submit" class="btn btn-primary" type="submit">
@@ -259,7 +260,7 @@
 
       <!-- Sign Up Form Section👆 -->
 
-      <section id="FAQ" class="container my-5">
+      <section id="FAQ" class="container my-5 px-4">
         <h1>Frequently Asked Questions</h1>
         <ul class="my-4" id="questions">
           <li>

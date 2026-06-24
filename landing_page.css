@@ -146,6 +146,7 @@ section#car0u5el_2 h1 {
 }
 ul#questions {
   list-style-type: none;
+  padding-left: 0;
 }
 
 /* NOTE: after much trial and error, I've come to the conclusion to
@@ -260,6 +261,11 @@ footer#footer {
   display: block;
 }
 
+.revealPasswords{
+  width: 15%;
+  height: 2.5rem;
+}
+
 @media (max-width: 1024px) {
   #watch-movies {
     font-size: 4.5rem;
@@ -337,4 +343,19 @@ footer#footer {
     height: 15rem;
     width: 10rem;
   }
+}
+@media (max-width: 480px) {
+section#Sign-Up h1{
+  font-size: 2.5rem;
+}
+section#Sign-Up form#Form div.signup-inputs label{
+  font-size: 1.5rem;
+}
+section#Sign-Up form#Form div.signup-inputs input{
+  height: 3.5rem;
+  font-size: 1.3rem;  
+}
+section#Sign-Up button#Submit{
+  font-size: 2rem;
+}
 }

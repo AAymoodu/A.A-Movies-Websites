@@ -18,14 +18,17 @@ buttons.forEach((button) => {
 // Prevent Default Action for Reveal-Password buttons 👆
 
 //Reveal-Password  buttons 👇
-const revealPassword = () => {
-  const password_input = document.querySelector("#password");
-  if (password_input.getAttribute("type") == "password") {
-    password_input.setAttribute("type", "text");
-  } else {
-    password_input.setAttribute("type", "password");
-  }
-};
+ const passwordBtns = document.querySelectorAll(".revealPasswords");
+ const revealPassword = () => {
+   const password_input = document.querySelector("#password");
+   if (password_input.getAttribute("type") == "password") {
+     password_input.setAttribute("type", "text");
+     passwordBtns[0].innerHTML = '<i class="bi bi-eye-slash"></i>';
+   } else {
+     password_input.setAttribute("type", "password");
+     passwordBtns[0].innerHTML = '<i class="bi bi-eye"></i>';
+   }
+ };
 // Reveal-Password  buttons 👆
 //
 //
