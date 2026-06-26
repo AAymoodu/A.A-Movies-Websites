@@ -250,6 +250,10 @@ button#FindMore-btn3 {
 }
 
 @media (max-width: 576px) {
+    .container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+  }
   div#Recommendations .card-body > img {
     width: 10rem;
     height: 16.5rem;

@@ -310,6 +310,7 @@ footer#footer {
 @media (max-width: 576px) {
   .container-fluid{
     padding-right: 0;
+    padding-left: 0;
   }
   div.card-body > img {
     width: 10rem;
