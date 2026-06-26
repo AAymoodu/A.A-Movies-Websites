@@ -136,37 +136,37 @@ div#Series_or_Movies_thumbnail img {
   height: 100%;
 }
 
-#collapse_Content_Container{
+#collapse_Content_Container {
   font-size: 1.5rem;
 }
-#video_Container{
+#video_Container {
   padding: 0.1rem;
 }
-video{
+video {
   width: 100%;
   height: auto;
 }
 
-#episode-links{
+#episode-links {
   overflow-x: scroll;
   /* width:100%; */
 }
 
-#episode-links ul{
-flex-wrap: nowrap;
-flex-shrink: 0;
-text-wrap: nowrap;
+#episode-links ul {
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  text-wrap: nowrap;
 }
 /* This portion is for the Main page styling */
-#comment-form{
+#comment-form {
   font-size: 1.5rem;
 }
 
-#username{
+#username {
   height: 2.5rem;
   font-size: 1.5rem;
 }
-#comment{
+#comment {
   height: 8rem;
   font-size: 1.5rem;
 }
@@ -175,6 +175,39 @@ footer#footer {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: background-color 0.3s ease;
+}
+div#Recommendations {
+  display: flex;
+  gap: 4rem;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  padding-bottom: 3rem;
+}
+div#Recommendations .card {
+  flex-shrink: 0;
+}
+div#Recommendations .card {
+  width: fit-content;
+}
+div#Recommendations .card > a {
+  text-decoration: none;
+  color: white;
+}
+div#Recommendations .card-body {
+  padding: 0;
+}
+div#Recommendations .card-body > img {
+  width: 15rem;
+  height: 22.5rem;
+}
+div#Recommendations .card-footer {
+  font-size: 1.5rem;
+}
+button#FindMore-btn3 {
+  width: 15.1rem;
+  height: 25.875rem;
+  font-size: 3rem;
 }
 
 .mobile-view {
@@ -211,15 +244,26 @@ footer#footer {
     color: #ddd;
     padding: 0 0.5rem;
   }
+  .navbar-expand{
+    height: 7.5rem;
+  }
 }
 
 @media (max-width: 576px) {
-  div.card-body > img {
+  div#Recommendations .card-body > img {
     width: 10rem;
     height: 16.5rem;
   }
-
-  button#FindMore-btn2,
+  div#Recommendations {
+    gap: 2.5rem;
+  }
+  div#Recommendations .card {
+    width: fit-content;
+    /* height: fit-content; */
+  }
+  div#Recommendations {
+    padding-bottom: 1.5rem;
+  }
   button#FindMore-btn3 {
     height: auto;
   }

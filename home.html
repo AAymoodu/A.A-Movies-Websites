@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A.A Movies home-page</title>
     <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="homepage.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
   </head>
 
   <body class="bg-dark text-light">
@@ -17,18 +19,29 @@
         <nav class="px-lg-5 navbar navbar-expand">
           <div class="container-fluid">
             <!-- Navbar Brand 👇 -->
-            <div class="navbar-brand text-light text-center d-flex align-items-center gap-5">
+            <div
+              class="navbar-brand text-light text-center d-flex align-items-center gap-5"
+            >
               <!--  -->
               <!--Desktop Side Nav button  -->
-              <button onclick="collapseSideNav()" id="hamburger" class="btn btn-outline-light desktop-view"
-                style="font-size: 2.5rem;">
+              <button
+                onclick="collapseSideNav()"
+                id="hamburger"
+                class="btn btn-outline-light desktop-view"
+                style="font-size: 2.5rem"
+              >
                 <i class="bi bi-list"></i>
               </button>
               <!--  -->
               <!-- Mobile Side Nav Button -->
-              <button id="hamburger2" class="btn btn-outline-light mobile-view" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"
-                style="font-size: 2.5rem;">
+              <button
+                id="hamburger2"
+                class="btn btn-outline-light mobile-view"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"
+              >
                 <i class="bi bi-list"></i>
               </button>
               <div>
@@ -42,9 +55,16 @@
             <!-- Navbar Brand 👆 -->
 
             <!-- Navbar toggle button👇 -->
-            <button id="btn-togle" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#NavigationBar" aria-controls="NavigationBar" aria-expanded="false"
-              aria-label="Toggle navigation">
+            <button
+              id="btn-togle"
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#NavigationBar"
+              aria-controls="NavigationBar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Navbar toggle button 👆 -->
@@ -52,7 +72,7 @@
             <div class="collapse navbar-collapse" id="NavigationBar">
               <ul class="navbar nav gap-4">
                 <li class="nav-item">
-                  <i class="bi bi-person-circle" style="font-size: 5rem; color: var(--AAMovies-green);"></i>
+                  <i id="userProfile" class="bi bi-person-circle"></i>
                 </li>
                 <!-- <button id="b0tton1" class="btn btn-primary b0tton">
                     <a class="nav-link text-light" href="./index.html#Sign-Up">Sign Up</a>
@@ -75,51 +95,77 @@
       <section class="col desktop-view" id="Side-navigation">
         <ul class="nav flex-column gap-4">
           <li class="nav-item">
-            <img src="./Assets/Icons/Home-navigation icons/icons8-home-50.png" alt="Home-icon" /><span></span><a
-              class="nav-link active" href="#">Home</a>
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-home-50.png"
+              alt="Home-icon"
+            /><span></span><a class="nav-link active" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <img src="./Assets/Icons/Home-navigation icons/icons8-search-50.png" alt="" /><span></span><a
-              class="nav-link" href="#">Search</a>
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-search-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">Search</a>
           </li>
           <li class="nav-item">
-            <img src="./Assets/Icons/Home-navigation icons/icons8-favorite-folder-50.png" alt="" /><span></span><a
-              class="nav-link" href="#">Favourites</a>
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-favorite-folder-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">Favourites</a>
           </li>
           <li class="nav-item">
-            <img src="./Assets/Icons/Home-navigation icons/icons8-trending-50.png" alt="" /><span></span><a
-              class="nav-link" href="#">Trending / Popular</a>
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-trending-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">Trending / Popular</a>
           </li>
           <li class="nav-item">
-            <img src="./Assets/Icons/Home-navigation icons/icons8-new-50.png" alt="" /><span></span><a class="nav-link"
-              href="#">New Releases</a>
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-new-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">New Releases</a>
           </li>
 
           <li class="nav-item">
-            <img src="./Assets/Icons/Home-navigation icons/icons8-cinema-50.png" alt="" /><span></span><a
-              class="nav-link" href="#">Movies</a>
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-cinema-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">Movies</a>
           </li>
           <li class="nav-item">
-            <img src="./Assets/Icons/Home-navigation icons/icons8-tv-50.png" alt="" /><span></span><a class="nav-link"
-              href="#">TV Shows / Series</a>
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-tv-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">TV Shows / Series</a>
           </li>
 
           <li class="nav-item">
-            <img src="./Assets/Icons/Home-navigation icons/icons8-time-machine-50.png" alt="" /><span></span><a
-              class="nav-link" href="#">History</a>
+            <img
+              src="./Assets/Icons/Home-navigation icons/icons8-time-machine-50.png"
+              alt=""
+            /><span></span><a class="nav-link" href="#">History</a>
           </li>
         </ul>
       </section>
       <!-- Side Navigation for Desktop devices👆 -->
 
-
       <!-- Side Navigation for Mobile and tablet devices👇👆 -->
-      <div style="width: 75%;" class="offcanvas offcanvas-start p-0" data-bs-scroll="true" tabindex="-1"
-        id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div
+        style="width: 75%"
+        class="offcanvas offcanvas-start p-0"
+        data-bs-scroll="true"
+        tabindex="-1"
+        id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel"
+      >
         <div class="offcanvas-header">
-          <button id="hamburger3" class="btn btn-outline-light mobile-view" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"
-            style="font-size: 2.5rem;">
+          <button
+            id="hamburger3"
+            class="btn btn-outline-light mobile-view"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+          >
             <i class="bi bi-list"></i>
           </button>
           <!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
@@ -128,49 +174,68 @@
           <section id="Side-navigation-mobile">
             <ul class="nav flex-column gap-2">
               <li class="nav-item">
-                <img src="./Assets/Icons/Home-navigation icons/icons8-home-50.png" alt="Home-icon" /><span></span><a
-                  class="nav-link active" href="#">Home</a>
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-home-50.png"
+                  alt="Home-icon"
+                /><span></span><a class="nav-link active" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <img src="./Assets/Icons/Home-navigation icons/icons8-search-50.png" alt="" /><span></span><a
-                  class="nav-link" href="#">Search</a>
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-search-50.png"
+                  alt=""
+                /><span></span><a class="nav-link" href="#">Search</a>
               </li>
               <li class="nav-item">
-                <img src="./Assets/Icons/Home-navigation icons/icons8-favorite-folder-50.png" alt="" /><span></span><a
-                  class="nav-link" href="#">Favourites</a>
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-favorite-folder-50.png"
+                  alt=""
+                /><span></span><a class="nav-link" href="#">Favourites</a>
               </li>
               <li class="nav-item">
-                <img src="./Assets/Icons/Home-navigation icons/icons8-trending-50.png" alt="" /><span></span><a
-                  class="nav-link" href="#">Trending / Popular</a>
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-trending-50.png"
+                  alt=""
+                /><span></span
+                ><a class="nav-link" href="#">Trending / Popular</a>
               </li>
               <li class="nav-item">
-                <img src="./Assets/Icons/Home-navigation icons/icons8-new-50.png" alt="" /><span></span><a
-                  class="nav-link" href="#">New Releases</a>
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-new-50.png"
+                  alt=""
+                /><span></span><a class="nav-link" href="#">New Releases</a>
               </li>
 
               <li class="nav-item">
-                <img src="./Assets/Icons/Home-navigation icons/icons8-cinema-50.png" alt="" /><span></span><a
-                  class="nav-link" href="#">Movies</a>
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-cinema-50.png"
+                  alt=""
+                /><span></span><a class="nav-link" href="#">Movies</a>
               </li>
               <li class="nav-item">
-                <img src="./Assets/Icons/Home-navigation icons/icons8-tv-50.png" alt="" /><span></span><a
-                  class="nav-link" href="#">TV Shows / Series</a>
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-tv-50.png"
+                  alt=""
+                /><span></span
+                ><a class="nav-link" href="#">TV Shows / Series</a>
               </li>
 
               <li class="nav-item">
-                <img src="./Assets/Icons/Home-navigation icons/icons8-time-machine-50.png" alt="" /><span></span><a
-                  class="nav-link" href="#">History</a>
+                <img
+                  src="./Assets/Icons/Home-navigation icons/icons8-time-machine-50.png"
+                  alt=""
+                /><span></span><a class="nav-link" href="#">History</a>
               </li>
             </ul>
           </section>
 
-          <p>Try scrolling the rest of the page to see this option in action.</p>
+          <p>
+            Try scrolling the rest of the page to see this option in action.
+          </p>
         </div>
       </div>
       <!-- Side Navigation for Mobile and tablet devices👇👆 -->
 
       <section class="col-8" id="main-page">
-
         <!-- POPULAR TRENDING SECTION 👇 -->
         <div class="Popular Trending-section d-flex flex-column">
           <div class="d-flex my-5">
@@ -181,14 +246,16 @@
             <!--  -->
             <!-- Item 1 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -196,14 +263,16 @@
 
             <!-- Item 2 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -211,14 +280,16 @@
 
             <!-- Item 3 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -226,14 +297,16 @@
 
             <!-- Item 4 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -241,14 +314,16 @@
 
             <!-- Item 5 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -256,14 +331,16 @@
 
             <!-- Item 6 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -271,14 +348,16 @@
 
             <!-- Item 7 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -286,14 +365,16 @@
 
             <!-- Item 8 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -301,14 +382,16 @@
 
             <!-- Item 9 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -316,14 +399,16 @@
 
             <!-- Item 10 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -331,14 +416,16 @@
 
             <!-- Item 11 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -346,14 +433,16 @@
 
             <!-- Item 12 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -361,15 +450,24 @@
 
             <!-- Item 13 👇 -->
 
-            <button class="ShowMore btn btn-secondary rounded-4" id="FindMore-btn1">Find More</button>
+            <button
+              class="ShowMore btn btn-secondary rounded-4"
+              id="FindMore-btn1"
+            >
+              Find More
+            </button>
             <!-- Item 13 👆 -->
-
           </div>
-          <button id="show-more-btn" onclick="showMore()" class="btn btn-outline-light py-4 fs-4" type="button">Show
-            More</button>
+          <button
+            id="show-more-btn"
+            onclick="showMore()"
+            class="btn btn-outline-light py-4 fs-4"
+            type="button"
+          >
+            Show More
+          </button>
         </div>
         <!-- POPULAR TRENDING SECTION 👆 -->
-
 
         <!-- POPULAR MOVIES SECTION 👇 -->
         <div class="Popular Movies-section d-flex flex-column">
@@ -382,14 +480,16 @@
             <!--  -->
             <!-- Item 1 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -397,14 +497,16 @@
 
             <!-- Item 2 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -412,14 +514,16 @@
 
             <!-- Item 3 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -427,14 +531,16 @@
 
             <!-- Item 4 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -442,14 +548,16 @@
 
             <!-- Item 5 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -457,14 +565,16 @@
 
             <!-- Item 6 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -472,14 +582,16 @@
 
             <!-- Item 7 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -487,14 +599,16 @@
 
             <!-- Item 8 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -502,14 +616,16 @@
 
             <!-- Item 9 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -517,14 +633,16 @@
 
             <!-- Item 10 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -532,14 +650,16 @@
 
             <!-- Item 11 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -547,14 +667,16 @@
 
             <!-- Item 12 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -562,13 +684,16 @@
 
             <!-- Item 13 👇 -->
 
-            <button class="ShowMore btn btn-secondary rounded-4" id="FindMore-btn2">Find More</button>
+            <button
+              class="ShowMore btn btn-secondary rounded-4"
+              id="FindMore-btn2"
+            >
+              Find More
+            </button>
             <!-- Item 13 👆 -->
-
           </div>
         </div>
         <!-- POPULAR MOVIES SECTION 👆 -->
-
 
         <!-- POPULAR SERIES SECTION 👇 -->
         <div class="Popular Series-section d-flex flex-column">
@@ -581,14 +706,16 @@
             <!--  -->
             <!-- Item 1 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -596,14 +723,16 @@
 
             <!-- Item 2 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -611,14 +740,16 @@
 
             <!-- Item 3 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -626,14 +757,16 @@
 
             <!-- Item 4 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -641,14 +774,16 @@
 
             <!-- Item 5 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -656,14 +791,16 @@
 
             <!-- Item 6 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -671,14 +808,16 @@
 
             <!-- Item 7 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -686,14 +825,16 @@
 
             <!-- Item 8 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -701,14 +842,16 @@
 
             <!-- Item 9 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -716,14 +859,16 @@
 
             <!-- Item 10 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -731,14 +876,16 @@
 
             <!-- Item 11 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -746,14 +893,16 @@
 
             <!-- Item 12 👇 -->
             <div class="card text-center text-bg-secondary rounded-top-4">
-              <a
-                href="./Spider-Noir.html">
+              <a href="./Spider-Noir.html">
                 <div class="card-body">
-                  <img class="card-img-top rounded-top-4" src="./Assets/Tv shows & Series/Spider-Noir.jpg" alt="" />
+                  <img
+                    class="card-img-top rounded-top-4"
+                    src="./Assets/Tv shows & Series/Spider-Noir.jpg"
+                    alt=""
+                  />
                 </div>
               </a>
-              <a class="card-link"
-                href="./Spider-Noir.html">
+              <a class="card-link" href="./Spider-Noir.html">
                 <div class="card-footer">Spider-Noir</div>
               </a>
             </div>
@@ -761,21 +910,27 @@
 
             <!-- Item 13 👇 -->
 
-            <button class="ShowMore btn btn-secondary rounded-4" id="FindMore-btn3">Find More</button>
+            <button
+              class="ShowMore btn btn-secondary rounded-4"
+              id="FindMore-btn3"
+            >
+              Find More
+            </button>
             <!-- Item 13 👆 -->
-
           </div>
         </div>
         <!-- POPULAR SERIES SECTION 👆 -->
       </section>
     </main>
 
-    <footer id="footer" class=" text-light py-5 mt-0">
+    <footer id="footer" class="text-light py-5 mt-0">
       <div class="container">
         <div class="row gy-4">
           <!-- Brand & Contact -->
           <div class="col-md-4">
-            <h2 class="text-primary mb-3"><span class="span1">A.A</span> <span class="span2">Movies</span></h2>
+            <h2 class="text-primary mb-3">
+              <span class="span1">A.A</span> <span class="span2">Movies</span>
+            </h2>
             <p class="text-secondary">
               Watch unlimited movies and shows anywhere, anytime.
             </p>
@@ -805,7 +960,9 @@
             <h5 class="mb-3">Support</h5>
             <ul class="nav flex-column gap-2">
               <li class="nav-item">
-                <a href="#FAQ" class="nav-link p-0 text-secondary">Help Center</a>
+                <a href="#FAQ" class="nav-link p-0 text-secondary"
+                  >Help Center</a
+                >
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link p-0 text-secondary">Account</a>
@@ -829,18 +986,19 @@
                         </div> -->
             <div class="mt-4">
               <p class="small text-secondary mb-0">© 2026 A.A Movies, Inc.</p>
-              <a href="#" class="small text-secondary me-3 text-decoration-none">Terms</a>
-              <a href="#" class="small text-secondary text-decoration-none">Privacy</a>
+              <a href="#" class="small text-secondary me-3 text-decoration-none"
+                >Terms</a
+              >
+              <a href="#" class="small text-secondary text-decoration-none"
+                >Privacy</a
+              >
             </div>
           </div>
         </div>
       </div>
     </footer>
 
-
-
     <script src="homepage.js"></script>
     <script src="./JS/bootstrap.min.js"></script>
   </body>
-
 </html>

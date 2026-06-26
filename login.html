@@ -1,32 +1,44 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A.A Movies - Login</title>
     <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="login.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
   </head>
 
-  <body class="bg-dark ">
+  <body class="bg-dark">
     <header class="text-center">
       <div class="my-3 rounded-3" id="navigation">
         <!-- <div class="container "> -->
         <nav class="px-lg-5 navbar navbar-expand-md navbar-expand-lg">
           <div class="container-fluid">
             <!-- Navbar Brand 👇 -->
-            <a class="navbar-brand text-light text-center" href="#"><span id="span1" class="h1">A.A</span><br /><span
-                id="span2" class="h2">Movies</span>
+            <a class="navbar-brand text-light text-center" href="#"
+              ><span id="span1" class="h1">A.A</span><br /><span
+                id="span2"
+                class="h2"
+                >Movies</span
+              >
             </a>
             <!-- Navbar Brand 👆 -->
 
             <!-- Navbar toggle button👇 -->
-            <button id="btn-togle" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#NavigationBar" aria-controls="NavigationBar" aria-expanded="false"
-              aria-label="Toggle navigation">
+            <button
+              id="btn-togle"
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#NavigationBar"
+              aria-controls="NavigationBar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Navbar toggle button 👆 -->
@@ -34,13 +46,17 @@
               <ul class="navbar nav gap-4">
                 <li class="nav-item">
                   <button id="b0tton1" class="btn btn-primary b0tton">
-                    <a class="nav-link text-light" href="./index.html#Sign-Up">Sign Up</a>
+                    <a class="nav-link text-light" href="./index.html#Sign-Up"
+                      >Sign Up</a
+                    >
                   </button>
                   <!-- <li><p>Or</p></li> -->
                 </li>
                 <li class="nav-item">
                   <button id="b0tton2" class="btn btn-primary b0tton">
-                    <a class="nav-link text-light" href="#Log-In" target="blank">Login</a>
+                    <a class="nav-link text-light" href="#Log-In" target="blank"
+                      >Login</a
+                    >
                   </button>
                 </li>
               </ul>
@@ -59,7 +75,7 @@
 
         <div class="login-inputs" id="email-login-input">
           <label for="email">Email:</label>
-          <input id="email" type="email" autocomplete="on"/>
+          <input id="email" type="email" autocomplete="on" />
           <p class="error" id="email-err"></p>
         </div>
 
@@ -72,7 +88,13 @@
           <label for="password">Password:</label>
           <input id="password" type="password" />
           <p class="error" id="password-err"></p>
-            <button onclick="revealPassword()" id="reveal-password" class=" p-1 btn btn-success btnNoDefault revealPasswords"><i class="bi bi-eye"></i></button>
+          <button
+            onclick="revealPassword()"
+            id="reveal-password"
+            class="p-1 btn btn-success btnNoDefault revealPasswords"
+          >
+            <i class="bi bi-eye"></i>
+          </button>
         </div>
 
         <button id="Submit" class="btn btn-primary my-1 my-md-4" type="submit">
@@ -82,14 +104,16 @@
     </section>
 
     <!-- Log in Form Section👆 -->
-     
+
     <!-- Footer Section -->
-    <footer id="footer" class=" text-light py-5 mt-5">
+    <footer id="footer" class="text-light py-5 mt-5">
       <div class="container">
         <div class="row gy-4">
           <!-- Brand & Contact -->
           <div class="col-md-4">
-            <h2 class="text-primary mb-3"><span class="span1">A.A</span> <span class="span2">Movies</span></h2>
+            <h2 class="text-primary mb-3">
+              <span class="span1">A.A</span> <span class="span2">Movies</span>
+            </h2>
             <p class="text-secondary">
               Watch unlimited movies and shows anywhere, anytime.
             </p>
@@ -119,7 +143,9 @@
             <h5 class="mb-3">Support</h5>
             <ul class="nav flex-column gap-2">
               <li class="nav-item">
-                <a href="#FAQ" class="nav-link p-0 text-secondary">Help Center</a>
+                <a href="#FAQ" class="nav-link p-0 text-secondary"
+                  >Help Center</a
+                >
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link p-0 text-secondary">Account</a>
@@ -143,8 +169,12 @@
             </div> -->
             <div class="mt-4">
               <p class="small text-secondary mb-0">© 2026 A.A Movies, Inc.</p>
-              <a href="#" class="small text-secondary me-3 text-decoration-none">Terms</a>
-              <a href="#" class="small text-secondary text-decoration-none">Privacy</a>
+              <a href="#" class="small text-secondary me-3 text-decoration-none"
+                >Terms</a
+              >
+              <a href="#" class="small text-secondary text-decoration-none"
+                >Privacy</a
+              >
             </div>
           </div>
         </div>
@@ -153,5 +183,4 @@
     <script src="login.js"></script>
     <script src="./JS/bootstrap.min.js"></script>
   </body>
-
 </html>

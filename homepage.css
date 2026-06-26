@@ -135,7 +135,6 @@ section#main-page {
   flex-grow: 1;
 }
 
-
 /* bootstrap card styling */
 div.card {
   width: fit-content;
@@ -154,7 +153,6 @@ div.card-body > img {
 div.card-footer {
   font-size: 1.5rem;
 }
-
 
 /*  */
 div#Trending-section-grid {
@@ -269,6 +267,14 @@ footer#footer {
 .mobile-view {
   display: none;
 }
+#userProfile {
+  font-size: 5rem;
+  color: var(--AAMovies-green);
+}
+#hamburger2,
+#hamburger3 {
+  font-size: 1.5rem;
+}
 @media (max-width: 1100px) {
   #Side-navigation ul li,
   #Side-navigation-mobile ul li {
@@ -307,11 +313,33 @@ footer#footer {
     height: 16.5rem;
   }
   div.card {
-  width: fit-content;
-  /* height: fit-content; */
-}
- button#FindMore-btn2,
-button#FindMore-btn3{
-  height: auto;
-}
+    width: fit-content;
+    /* height: fit-content; */
+  }
+  button#FindMore-btn2,
+  button#FindMore-btn3 {
+    height: auto;
+  }
+  div#Trending-section-grid {
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    column-gap: 1.1rem;
+  }
+  button#FindMore-btn1 {
+    width: fit-content;
+  }
+  div#Trending-Movies-section,
+  div#Trending-Series-section {
+    gap: 2.5rem;
+  }
+  #userProfile {
+    font-size: 3rem;
+  }
+  div#Trending-Movies-section,
+  div#Trending-Series-section {
+    padding-bottom: 1.5rem;
+  }
+  div#Trending-section-grid {
+    height: 21rem;
+    margin-bottom: 2rem;
+  }
 }
