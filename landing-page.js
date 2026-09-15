@@ -18,20 +18,25 @@ buttons.forEach((button) => {
 // Prevent Default Action for Reveal-Password buttons 👆
 
 //Reveal-Password  buttons 👇
+ const passwordBtns = document.querySelectorAll(".revealPasswords");
 const revealPassword = () => {
   const password_input = document.querySelector("#password");
   if (password_input.getAttribute("type") == "password") {
     password_input.setAttribute("type", "text");
+    passwordBtns[0].innerHTML = '<i class="bi bi-eye-slash"></i>';
   } else {
     password_input.setAttribute("type", "password");
+    passwordBtns[0].innerHTML = '<i class="bi bi-eye"></i>';
   }
 };
 const revealConfirmPassword = () => {
   const confirmpassword_input = document.querySelector("#confirmpassword");
   if (confirmpassword_input.getAttribute("type") == "password") {
     confirmpassword_input.setAttribute("type", "text");
+    passwordBtns[1].innerHTML = '<i class="bi bi-eye-slash"></i>';
   } else {
     confirmpassword_input.setAttribute("type", "password");
+    passwordBtns[1].innerHTML = '<i class="bi bi-eye"></i>';
   }
 };
 // Reveal-Password  buttons 👆
