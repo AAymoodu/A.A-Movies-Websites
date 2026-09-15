@@ -36,19 +36,65 @@ const revealConfirmPassword = () => {
 };
 // Reveal-Password  buttons 👆
 
-const formCompleted = () => {
+const formCompleted = async () => {
   const error = document.querySelectorAll(".error");
   // console.log(error);
   const error_Array = [...error];
   console.log(error_Array);
 
   if (error_Array.every((value) => value.textContent == "")) {
-    alert("Account Creation Successful. You will be redirected to Login");
+    try {
+      const url = `http://localhost:3500/users/signup`;
 
-    setTimeout(() => {
-      window.open("./login.html", "_self");
-    }, 2000);
-  } else {
+      const fullname_input = document.querySelector("#fullname").value;
+      const email_input = document.querySelector("#email").value;
+      const username_input = document.querySelector("#username").value;
+      const password_input = document.querySelector("#password").value;
+
+      const payload = {
+        fullName: fullname_input,
+        email: email_input,
+        username: username_input,
+        password: password_input,
+      };
+
+      const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: {
+          "content-type": "application/json",
+        },
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        if (response.status == 500) {
+          console.log(data);
+
+          alert(`${data.detail}`);
+          return;
+        }
+        if (response.status == 409) {
+          console.log(data);
+
+          alert(`${data.detail}. You will be redirected to login`);
+          location.href = `./login.html`;
+          return;
+        }
+        console.log(data);
+
+        alert(`${data.detail}`);
+        return;
+      }
+
+      alert("Account Creation Successful. You will be redirected to Login");
+      setTimeout(() => {
+        window.open("./login.html", "_self");
+      }, 5000);
+      return;
+    } catch (err) {
+      alert("Something Went Wrong");
+      return;
+    }
   }
 };
 

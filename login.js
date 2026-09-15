@@ -40,7 +40,7 @@ const formCompleted = () => {
       "Welcome to A.A Movies 📺🍿🔥. Have a Happy Watching Experience 😊👍❤️",
     );
 
-    window.open("./home.html", "_self");
+    window.open("./homepages/home.html", "_self");
     
     // setTimeout(() => {
     //   window.open("./home.html", "_self");
