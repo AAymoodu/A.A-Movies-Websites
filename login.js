@@ -18,36 +18,92 @@ buttons.forEach((button) => {
 // Prevent Default Action for Reveal-Password buttons 👆
 
 //Reveal-Password  buttons 👇
- const passwordBtns = document.querySelectorAll(".revealPasswords");
- const revealPassword = () => {
-   const password_input = document.querySelector("#password");
-   if (password_input.getAttribute("type") == "password") {
-     password_input.setAttribute("type", "text");
-     passwordBtns[0].innerHTML = '<i class="bi bi-eye-slash"></i>';
-   } else {
-     password_input.setAttribute("type", "password");
-     passwordBtns[0].innerHTML = '<i class="bi bi-eye"></i>';
-   }
- };
+const passwordBtns = document.querySelectorAll(".revealPasswords");
+const revealPassword = () => {
+  const password_input = document.querySelector("#password");
+  if (password_input.getAttribute("type") == "password") {
+    password_input.setAttribute("type", "text");
+    passwordBtns[0].innerHTML = '<i class="bi bi-eye-slash"></i>';
+  } else {
+    password_input.setAttribute("type", "password");
+    passwordBtns[0].innerHTML = '<i class="bi bi-eye"></i>';
+  }
+};
 // Reveal-Password  buttons 👆
 //
 //
-const formCompleted = () => {
+const formCompleted = async () => {
   const error = document.querySelectorAll(".error");
   // console.log(error);
   const error_Array = [...error];
-  console.log(error_Array);
+  // console.log(error_Array);
 
   if (error_Array.every((value) => value.textContent == "")) {
-    alert(
-      "Welcome to A.A Movies 📺🍿🔥. Have a Happy Watching Experience 😊👍❤️",
-    );
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-    window.open("./homepages/home.html", "_self");
-    
-    // setTimeout(() => {
-    //   window.open("./home.html", "_self");
-    // }, 2000);
+    const signinUrl = `http://localhost:3500/users/signin`;
+    const roleUrl = `http://localhost:3500/users/userrole`;
+
+    const payload = {
+      email,
+      password,
+    };
+
+    try {
+      const response1 = await fetch(signinUrl, {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: {
+          "content-type": "application/json",
+        },
+      });
+      const data1 = await response1.json();
+      if (!response1.ok) {
+        alert(`Something Went Wrong:\n ${data1.detail}`);
+        return;
+      }
+      // console.log(data1);
+
+      localStorage.setItem("aamovies_accesstoken", data1.accessToken);
+      localStorage.setItem("aamovies_refreshtoken", data1.refreshToken);
+
+      const accessToken = localStorage.getItem("aamovies_accesstoken");
+      // console.log(accessToken);
+
+      const response2 = await fetch(roleUrl, {
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${accessToken}`,
+        },
+      });
+
+      const data2 = await response2.json();
+      if (!response2.ok) {
+        alert(`Something Went Wrong:\n ${data2.detail}`);
+        return;
+      }
+      // console.log(data2);
+
+      if (data2 == "admin") {
+        location.href = "./homepages/admin-home.html";
+        return;
+      } else if (data2 == "user") {
+        location.href = "./homepages/home.html";
+        return;
+      } else {
+        throw new Error("403 Forbidden");
+      }
+    } catch (err) {
+      alert(`something went Wrong: ${err}`);
+      return;
+    }
+
+    // alert(
+    //   "Welcome to A.A Movies 📺🍿🔥. Have a Happy Watching Experience 😊👍❤️",
+    // );
+
+    // window.open("./homepages/home.html", "_self");
   } else {
   }
 };
