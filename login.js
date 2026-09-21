@@ -33,6 +33,8 @@ const revealPassword = () => {
 //
 //
 const formCompleted = async () => {
+  loading.style.display = "inline-block";
+
   const error = document.querySelectorAll(".error");
   // console.log(error);
   const error_Array = [...error];
@@ -43,7 +45,7 @@ const formCompleted = async () => {
     const password = document.getElementById("password").value;
 
     const signinUrl = `http://localhost:3500/users/signin`;
-    const roleUrl = `http://localhost:3500/users/userrole`;
+    const roleUrl = `http://localhost:3500/users/user`;
 
     const payload = {
       email,
@@ -61,6 +63,7 @@ const formCompleted = async () => {
       const data1 = await response1.json();
       if (!response1.ok) {
         alert(`Something Went Wrong:\n ${data1.detail}`);
+        loading.style.display = "none";
         return;
       }
       // console.log(data1);
@@ -81,20 +84,24 @@ const formCompleted = async () => {
       const data2 = await response2.json();
       if (!response2.ok) {
         alert(`Something Went Wrong:\n ${data2.detail}`);
+        loading.style.display = "none";
         return;
       }
-      // console.log(data2);
+      console.log(data2);
 
-      if (data2 == "admin") {
+      if (data2.userRole == "admin") {
+        loading.style.display = "none";
         location.href = "./homepages/admin-home.html";
         return;
-      } else if (data2 == "user") {
+      } else if (data2.userRole == "user") {
+        loading.style.display = "none";
         location.href = "./homepages/home.html";
         return;
       } else {
         throw new Error("403 Forbidden");
       }
     } catch (err) {
+      loading.style.display = "none";
       alert(`something went Wrong: ${err}`);
       return;
     }
@@ -105,6 +112,8 @@ const formCompleted = async () => {
 
     // window.open("./homepages/home.html", "_self");
   } else {
+    loading.style.display = "none";
+    return;
   }
 };
 //
@@ -166,9 +175,12 @@ const validateForm = () => {
   });
   // Password  Validation 👆
 };
+const loading = document.getElementById("bootstrapLoading");
+// loading.style.display="inline-block"
 
 document.querySelector("#Form").addEventListener("submit", (formData) => {
   formData.preventDefault();
   validateForm();
   formCompleted();
+  // loading.style.display = "none";
 });
