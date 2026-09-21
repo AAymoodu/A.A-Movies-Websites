@@ -182,5 +182,4 @@ document.querySelector("#Form").addEventListener("submit", (formData) => {
   formData.preventDefault();
   validateForm();
   formCompleted();
-  // loading.style.display = "none";
 });
