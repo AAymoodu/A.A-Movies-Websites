@@ -124,7 +124,6 @@ const formCompleted = async () => {
   if (error_Array.every((error) => error.textContent == "")) {
     const url = `http://localhost:3500/media/addmedia`;
 
-
     const poster = document.getElementById("poster").value;
     const name = document.getElementById("name").value;
     const description = document.getElementById("description").value;
@@ -133,7 +132,6 @@ const formCompleted = async () => {
     const episodeLinks = [...document.querySelectorAll(".episode")];
     const episodes = episodeLinks.map((episode) => episode.value);
 
-
     const payload = {
       poster,
       name,
@@ -141,10 +139,29 @@ const formCompleted = async () => {
       type,
       episodes,
     };
-    console.log(payload);
-    const response = await fetch(url, {
-      body:JSON.stringify(payload)
-    });
+    // console.log(payload);
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: {
+          "content-type": "application/json",
+        },
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        alert(`Something Went Wrong: ${data.detail}`);
+        loading.style.display = "none";
+        return;
+      }
+      console.log(data);
+      alert(`${data.detail}`);
+      loading.style.display = "none";
+    } catch (err) {
+      alert(`something went Wrong: ${err}`);
+      loading.style.display = "none";
+      return;
+    }
   } else {
     loading.style.display = "none";
     return;
