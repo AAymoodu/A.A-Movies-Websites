@@ -166,6 +166,9 @@ const formCompleted = async () => {
       console.log(data);
       alert(`${data.detail}`);
       loading.style.display = "none";
+      const id = data.media._id;
+      // location.href = `../watch-pages/watch-now-admin.html?id=${data.media._id}`;
+      location.href = `../watch-pages/watch-now-admin.html?id=${id}`;
     } catch (err) {
       alert(`something went Wrong: ${err}`);
       loading.style.display = "none";

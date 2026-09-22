@@ -1,8 +1,8 @@
 const videos = document.querySelectorAll(".lazy-videos");
 console.log(videos);
-videos.forEach((video) => {
-  console.log(video.children[0].getAttribute("src"));
-});
+// videos.forEach((video) => {
+//   console.log(video.children[0].getAttribute("src"));
+// });
 
 const observerSettings = {
   root: null,

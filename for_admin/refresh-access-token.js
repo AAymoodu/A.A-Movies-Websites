@@ -1,4 +1,6 @@
 const refreshTokenAtIntervals = () => {
+  refreshAccessTokenFunction()
+
   setInterval(() => {
     refreshAccessTokenFunction();
   }, 1080000);
