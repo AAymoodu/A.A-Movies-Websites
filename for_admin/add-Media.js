@@ -140,16 +140,25 @@ const formCompleted = async () => {
       episodes,
     };
     // console.log(payload);
+    const accessToken = localStorage.getItem("aamovies_accesstoken");
+
     try {
       const response = await fetch(url, {
         method: "POST",
         body: JSON.stringify(payload),
         headers: {
           "content-type": "application/json",
+          authorization: `Bearer ${accessToken}`,
         },
       });
       const data = await response.json();
       if (!response.ok) {
+        if (response.status == 401) {
+          alert(`Something Went Wrong: ${data.detail}`);
+          loading.style.display = "none";
+          location.href = "../login.html";
+          return;
+        }
         alert(`Something Went Wrong: ${data.detail}`);
         loading.style.display = "none";
         return;
