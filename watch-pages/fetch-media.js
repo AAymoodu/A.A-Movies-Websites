@@ -44,11 +44,11 @@ const setMedia = (data) => {
 
   episodes.forEach((episode) => {
     const episodeNumber = episodes.indexOf(episode) + 1;
-    console.log(episodeNumber);
+    // console.log(episodeNumber);
 
     const originalId = `${data.media.name}_EP_${episodeNumber}`;
     const cleanedId = originalId.replace(/[\s:\(\)]/g, "");
-    console.log(cleanedId);
+    // console.log(cleanedId);
 
     const episodeLink = document.createElement("li");
     episodeLink.classList.add("nav-item");
@@ -108,9 +108,41 @@ const setMedia = (data) => {
   });
 };
 
+const videoPlayingScript = () => {
+  const videos = document.querySelectorAll(".lazy-videos");
+  console.log(videos);
+  // videos.forEach((video) => {
+  //   console.log(video.children[0].getAttribute("src"));
+  // });
+
+  const observerSettings = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1, //trigger when 10% of element enter the viewport
+  };
+
+  const observer = new IntersectionObserver((entries, observing) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const lazy_video = entry.target;
+        lazy_video.play(); //plays the video once it enters the viewport
+        // observing.unobserve(entry.target);
+      } else {
+        const lazy_video = entry.target;
+        lazy_video.pause(); // pauses the video once it leaves the viewport
+      }
+    });
+  }, observerSettings);
+
+  videos.forEach((video) => {
+    observer.observe(video);
+  });
+};
+
 document.addEventListener("DOMContentLoaded", async () => {
   const url = getUrl();
   const data = await getMedia(url);
-  console.log(data);
+  // console.log(data);
   setMedia(data);
+//  videoPlayingScript()
 });
