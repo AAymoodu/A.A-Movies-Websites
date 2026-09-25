@@ -214,6 +214,61 @@ button#FindMore-btn3 {
   display: none;
 }
 
+div.edit-inputs {
+  display: flex;
+  flex-direction: column;
+}
+div.edit-inputs label {
+  font-size: 1.5rem;
+}
+
+div.edit-inputs input,
+div.edit-inputs select {
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
+div.edit-inputs textarea#description {
+  height: 10rem;
+  font-size: 1.5rem;
+}
+
+div.episode {
+  display: flex;
+  flex-direction: column;
+}
+
+div.episode label {
+  font-size: 1.5rem;
+}
+
+div.episode input {
+  height: 2rem;
+  font-size: 1.5rem;
+}
+
+button#edit {
+  font-size: 2.5rem;
+  background-color: var(--AAMovies-green);
+  border: 5px solid var(--AAMovies-green);
+  width: 100%;
+}
+
+div#episode-header{
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+}
+
+div#episode-header button{
+  font-size: 1.5rem;
+}
+
+div#episode-list{
+  max-height: 25.5rem;
+  overflow-y: auto;
+}
+
 @media (max-width: 1100px) {
   #Side-navigation ul li,
   #Side-navigation-mobile ul li {
@@ -244,19 +299,18 @@ button#FindMore-btn3 {
     color: #ddd;
     padding: 0 0.5rem;
   }
-  .navbar-expand{
+  .navbar-expand {
     height: 7.5rem;
   }
 }
 
 @media (max-width: 576px) {
-    .container-fluid{
+  .container-fluid {
     padding-right: 0;
     padding-left: 0;
   }
-  .row>*{
+  .row > * {
     padding-right: 0;
-
   }
   div#Recommendations .card-body > img {
     width: 10rem;

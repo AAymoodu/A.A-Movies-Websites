@@ -306,7 +306,7 @@
           >
             <p id="media-description">?Description?</p>
 
-              <p>📺 Type: <span id="media-type"></span></p>
+            <p>📺 Type: <span id="media-type"></span></p>
           </div>
         </div>
         <!-- Movie or Series Description👆 -->
@@ -316,7 +316,6 @@
         <div class="card">
           <div class="card-header" id="episode-links">
             <ul class="nav nav-pills" id="pills-tab" role="tablist">
-              
               <!-- Episode 1 link 👇 -->
               <!-- <li class="nav-item" role="presentation">
                 <button
@@ -354,7 +353,6 @@
           </div>
 
           <div class="card-body tab-content" id="video_Container">
-            
             <!-- Episode 1 video 👇 -->
             <!-- <div
               class="tab-pane fade show active"
@@ -621,8 +619,8 @@
         <!-- RECOMMENDATION Section 👆👇 -->
       </section>
 
-      <section class="col-12 col-lg-2" id="comment-column">
-        <h1 class="mt-5 mb-4">Comment Section:</h1>
+      <section class="col-12 col-lg-3" id="comment-column">
+        <h1 class="mt-5 mb-4">Media Control Panel:</h1>
 
         <form action="" class="d-flex flex-column" id="comment-form">
           <label for="username">UserName</label>
@@ -632,6 +630,60 @@
           <textarea name="comment" id="comment"></textarea>
 
           <button class="btn btn-primary w-50 my-4" type="submit">Post</button>
+        </form>
+
+        <form action="" id="edit-media-form">
+          <div class="edit-inputs" id="poster-input">
+            <label for="poster">Poster:</label>
+            <input id="poster" type="text" autocomplete="on" />
+            <p class="error" id="poster-err"></p>
+          </div>
+
+          <div class="edit-inputs" id="name-input">
+            <label for="name">Name:</label>
+            <input id="name" type="text" autocomplete="on" />
+            <p class="error" id="name-err"></p>
+          </div>
+          <div class="edit-inputs" id="description-input">
+            <label for="description">Description:</label>
+            <textarea name="description" id="description"></textarea>
+            <!-- <input id="description" type="text" autocomplete="on" /> -->
+            <p class="error" id="description-err"></p>
+          </div>
+
+          <div class="edit-inputs" id="type-input">
+            <label for="edit-type">Type:</label>
+            <select name="edit-type" id="edit-type">
+              <option value="" selected disabled>-- Choose an option --</option>
+              <option value="Movie">Movie</option>
+              <option value="Series">Series</option>
+            </select>
+            <p class="error" id="type-err"></p>
+          </div>
+          <div id="episode-header">
+            <h2 class="mb-0">Episodes:</h2>
+            <button class="btn btn-success" id="add-episode">Add</button>
+            <button class="btn btn-danger" id="delete-episode">Del</button>
+          </div>
+
+          <div id="episode-list" class="bg-dark text-light">
+            <!-- <div class="episode">
+              <label for="episode1"
+                >ep <span class="episode-number">1</span>:</label
+              >
+              <input id="episode1" type="text" />
+            </div> -->
+          </div>
+
+          <button id="edit" class="btn btn-success my-1 my-md-4">
+            <span role="status">Edit</span>
+            <span
+              id="bootstrapLoading"
+              class="spinner-border spinner-border"
+              aria-hidden="true"
+              style="width: 3rem; height: 3rem; display: none"
+            ></span>
+          </button>
         </form>
       </section>
     </main>

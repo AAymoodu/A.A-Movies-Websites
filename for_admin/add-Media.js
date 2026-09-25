@@ -163,6 +163,7 @@ const formCompleted = async () => {
         loading.style.display = "none";
         return;
       }
+      
       console.log(data);
       alert(`${data.detail}`);
       loading.style.display = "none";

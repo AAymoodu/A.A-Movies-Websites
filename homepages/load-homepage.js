@@ -15,10 +15,10 @@ const getAndSetAllMedia = async () => {
   const response = await fetch(url);
   const data = await response.json();
   const allMedias = data.allMedia;
-  console.log(allMedias);
+  // console.log(allMedias);
 
   allMedias.forEach((media) => {
-    console.log(media.name);
+    // console.log(media.name);
     const mediaCard = document.createElement("div");
     mediaCard.classList.add(
       "card",
@@ -48,10 +48,10 @@ const getAndSetMovies = async () => {
   const response = await fetch(url);
   const data = await response.json();
   const allMovies = data.movies;
-  console.log(allMovies);
+  // console.log(allMovies);
 
   allMovies.forEach((movie) => {
-    console.log(movie.name);
+    // console.log(movie.name);
     const movieCard = document.createElement("div");
     movieCard.classList.add(
       "card",
@@ -81,10 +81,10 @@ const getAndSetSeries = async () => {
   const response = await fetch(url);
   const data = await response.json();
   const allSeries = data.Series;
-  console.log(allSeries);
+  // console.log(allSeries);
 
   allSeries.forEach((series) => {
-    console.log(series.name);
+    // console.log(series.name);
     const seriesCard = document.createElement("div");
     seriesCard.classList.add(
       "card",
