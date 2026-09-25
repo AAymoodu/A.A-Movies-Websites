@@ -1,55 +1,3 @@
-const addEpisodeBtn = document.getElementById("add-episode");
-// console.log(addEpisodeBtn);
-addEpisodeBtn.addEventListener("click", (btnEvent) => {
-  btnEvent.preventDefault();
-  const episodeList = document.getElementById("episode-list");
-  const episodeNumber = document.querySelectorAll(".episode").length + 1;
-  // console.log(episodeNumber);
-
-  const episodeDiv = document.createElement("div");
-  episodeDiv.classList.add("episode");
-  episodeDiv.innerHTML = `  <label for="episode${episodeNumber}"
-                >ep <span class="episode-number">${episodeNumber}</span>:</label
-              >
-              <input id="episode${episodeNumber}" type="text" />`;
-  episodeList.append(episodeDiv);
-});
-
-const deleteEpisodeBtn = document.getElementById("delete-episode");
-// deleteEpisodeBtn.addEventListener("click", (btnEvent) => {
-//   btnEvent.preventDefault();
-//   const episodes = [...document.querySelectorAll(".episode input")];
-//   const deletingEpisode = episodes.map((episode) => episode.value);
-//   deletingEpisode.pop();
-
-//   const episodeList = document.getElementById("episode-list");
-//   episodeList.innerHTML = ``;
-//   deletingEpisode.forEach((episode) => {
-//     const episodeNumber = deletingEpisode.indexOf(episode) + 1;
-//     // console.log(episodeNumber);
-
-//     const episodeDiv = document.createElement("div");
-//     episodeDiv.classList.add("episode");
-//     episodeDiv.innerHTML = `  <label for="episode${episodeNumber}"
-//                 >ep <span class="episode-number">${episodeNumber}</span>:</label
-//               >
-//               <input id="episode${episodeNumber}" type="text" />`;
-//     episodeList.append(episodeDiv);
-//     const episodeInput = document.getElementById(`episode${episodeNumber}`);
-//     // console.log(episodeInput);
-//     episodeInput.value = `${episode}`;
-//   });
-// });
-
-deleteEpisodeBtn.addEventListener("click", (btnEvent) => {
-  btnEvent.preventDefault();
-  const episodes = [...document.querySelectorAll(".episode")];
-  // console.log(episodes);
-
-  const lastEpisode = episodes.at(-1);
-  // console.log(lastEpisode);
-  lastEpisode.remove();
-});
 
 const getUrl = () => {
   const params = new URLSearchParams(window.location.search);
@@ -164,37 +112,6 @@ const setMedia = (data) => {
   });
 };
 
-const setEditMedia = (data) => {
-  const posterValue = (document.getElementById("poster").value =
-    `${data.media.poster}`);
-  const nameValue = (document.getElementById("name").value =
-    `${data.media.name}`);
-  const descriptionValue = (document.getElementById("description").value =
-    `${data.media.description}`);
-  const typeValue = (document.getElementById("edit-type").value =
-    `${data.media.type}`);
-
-  const episodeList = document.getElementById("episode-list");
-  const allEpisodes = data.media.episodes;
-  // console.log(allEpisodes);
-
-  allEpisodes.forEach((episode) => {
-    const episodeNumber = allEpisodes.indexOf(episode) + 1;
-    // console.log(episodeNumber);
-
-    const episodeDiv = document.createElement("div");
-    episodeDiv.classList.add("episode");
-    episodeDiv.innerHTML = `  <label for="episode${episodeNumber}"
-                >ep <span class="episode-number">${episodeNumber}</span>:</label
-              >
-              <input id="episode${episodeNumber}" type="text" />`;
-    episodeList.append(episodeDiv);
-    const episodeInput = document.getElementById(`episode${episodeNumber}`);
-    // console.log(episodeInput);
-    episodeInput.value = `${episode}`;
-  });
-};
-
 const videoPlayingScript = () => {
   const videos = document.querySelectorAll(".lazy-videos");
   console.log(videos);
@@ -231,148 +148,138 @@ document.addEventListener("DOMContentLoaded", async () => {
   const data = await getMedia(url);
   // console.log(data);
   setMedia(data);
-  // videoPlayingScript();
-  setEditMedia(data);
-
-  editButton.addEventListener("click", (btnEvent) => {
-    btnEvent.preventDefault();
-    editMedia(data);
-  });
-  deleteButton.addEventListener("click", (btnEvent) => {
-    btnEvent.preventDefault();
-    deleteMedia(url);
-  });
+  videoPlayingScript();
 });
 
-const editButton = document.getElementById("edit");
-// console.log(editButton);
-const editMedia = async (data) => {
-  const loading = document.getElementById("bootstrapLoading");
-  loading.style.display = "inline-block";
+// const editButton = document.getElementById("edit");
+// // console.log(editButton);
+// const editMedia = async (data) => {
+//   const loading = document.getElementById("bootstrapLoading");
+//   loading.style.display = "inline-block";
 
-  const params = new URLSearchParams(window.location.search);
-  const mediaId = params.get("id");
-  const url = `http://localhost:3500/media/${mediaId}`;
+//   const params = new URLSearchParams(window.location.search);
+//   const mediaId = params.get("id");
+//   const url = `http://localhost:3500/media/${mediaId}`;
 
-  // console.log(data);
-  const posterValue = document.getElementById("poster").value;
-  const nameValue = document.getElementById("name").value;
-  const descriptionValue = document.getElementById("description").value;
-  const typeValue = document.getElementById("edit-type").value;
-  const episodeLinks = [...document.querySelectorAll(".episode input")];
-  const episodes = episodeLinks.map((episode) => episode.value);
+//   // console.log(data);
+//   const posterValue = document.getElementById("poster").value;
+//   const nameValue = document.getElementById("name").value;
+//   const descriptionValue = document.getElementById("description").value;
+//   const typeValue = document.getElementById("edit-type").value;
+//   const episodeLinks = [...document.querySelectorAll(".episode input")];
+//   const episodes = episodeLinks.map((episode) => episode.value);
 
-  // console.log(episodes);
+//   // console.log(episodes);
 
-  if (nameValue == data.media.name) {
-    const payload = {
-      poster: posterValue,
-      description: descriptionValue,
-      type: typeValue,
-      episodes,
-    };
+//   if (nameValue == data.media.name) {
+//     const payload = {
+//       poster: posterValue,
+//       description: descriptionValue,
+//       type: typeValue,
+//       episodes,
+//     };
 
-    // console.log(payload);
-    const accessToken = localStorage.getItem("aamovies_accesstoken");
-    // console.log(accessToken);
-    try {
-      const response = await fetch(url, {
-        method: "PATCH",
-        body: JSON.stringify(payload),
-        headers: {
-          "content-type": "application/json",
-          authorization: `Bearer ${accessToken}`,
-        },
-      });
+//     // console.log(payload);
+//     const accessToken = localStorage.getItem("aamovies_accesstoken");
+//     // console.log(accessToken);
+//     try {
+//       const response = await fetch(url, {
+//         method: "PATCH",
+//         body: JSON.stringify(payload),
+//         headers: {
+//           "content-type": "application/json",
+//           authorization: `Bearer ${accessToken}`,
+//         },
+//       });
 
-      const editedData = await response.json();
-      if (!response.ok) {
-        alert(`Something Went Wrong: ${editedData.detail}`);
-        loading.style.display = "none";
-        return;
-      }
+//       const editedData = await response.json();
+//       if (!response.ok) {
+//         alert(`Something Went Wrong: ${editedData.detail}`);
+//         loading.style.display = "none";
+//         return;
+//       }
 
-      // console.log(editedData);
-      alert(`${editedData.detail}`);
-      loading.style.display = "none";
-      const id = editedData.media._id;
-      // location.href = `../watch-pages/watch-now-admin.html?id=${data.media._id}`;
-      location.href = `../watch-pages/watch-now-admin.html?id=${id}`;
-    } catch (err) {
-      alert(`something went Wrong: ${err}`);
-      loading.style.display = "none";
-      return;
-    }
-  } else {
-    const payload = {
-      poster: posterValue,
-      name: nameValue,
-      description: descriptionValue,
-      type: typeValue,
-      episodes,
-    };
+//       // console.log(editedData);
+//       alert(`${editedData.detail}`);
+//       loading.style.display = "none";
+//       const id = editedData.media._id;
+//       // location.href = `../watch-pages/watch-now-admin.html?id=${data.media._id}`;
+//       location.href = `../watch-pages/watch-now-admin.html?id=${id}`;
+//     } catch (err) {
+//       alert(`something went Wrong: ${err}`);
+//       loading.style.display = "none";
+//       return;
+//     }
+//   } else {
+//     const payload = {
+//       poster: posterValue,
+//       name: nameValue,
+//       description: descriptionValue,
+//       type: typeValue,
+//       episodes,
+//     };
 
-    // console.log(payload);
-    const accessToken = localStorage.getItem("aamovies_accesstoken");
-    // console.log(accessToken);
-    try {
-      const response = await fetch(url, {
-        method: "PATCH",
-        body: JSON.stringify(payload),
-        headers: {
-          "content-type": "application/json",
-          authorization: `Bearer ${accessToken}`,
-        },
-      });
+//     // console.log(payload);
+//     const accessToken = localStorage.getItem("aamovies_accesstoken");
+//     // console.log(accessToken);
+//     try {
+//       const response = await fetch(url, {
+//         method: "PATCH",
+//         body: JSON.stringify(payload),
+//         headers: {
+//           "content-type": "application/json",
+//           authorization: `Bearer ${accessToken}`,
+//         },
+//       });
 
-      const editedData = await response.json();
-      if (!response.ok) {
-        alert(`Something Went Wrong: ${editedData.detail}`);
-        loading.style.display = "none";
-        return;
-      }
+//       const editedData = await response.json();
+//       if (!response.ok) {
+//         alert(`Something Went Wrong: ${editedData.detail}`);
+//         loading.style.display = "none";
+//         return;
+//       }
 
-      // console.log(editedData);
-      alert(`${editedData.detail}`);
-      loading.style.display = "none";
-      const id = editedData.media._id;
-      // location.href = `../watch-pages/watch-now-admin.html?id=${data.media._id}`;
-      location.href = `../watch-pages/watch-now-admin.html?id=${id}`;
-    } catch (err) {
-      alert(`something went Wrong: ${err}`);
-      loading.style.display = "none";
-      return;
-    }
-  }
-};
+//       // console.log(editedData);
+//       alert(`${editedData.detail}`);
+//       loading.style.display = "none";
+//       const id = editedData.media._id;
+//       // location.href = `../watch-pages/watch-now-admin.html?id=${data.media._id}`;
+//       location.href = `../watch-pages/watch-now-admin.html?id=${id}`;
+//     } catch (err) {
+//       alert(`something went Wrong: ${err}`);
+//       loading.style.display = "none";
+//       return;
+//     }
+//   }
+// };
 
-const deleteButton = document.getElementById("delete");
-// console.log(deleteButton);
-const deleteMedia = async (url) => {
-  const deleteLoading = document.getElementById("bootstrapLoading2");
-  deleteLoading.style.display = "inline-block";
-  // console.log(url);
-  const accessToken = localStorage.getItem("aamovies_accesstoken");
-  try {
-    const response = await fetch(url, {
-      method: "DELETE",
-      headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${accessToken}`,
-      },
-    });
-    const data = await response.json();
-    if (!response.ok) {
-      alert(`Something Went Wrong: ${data.detail}`);
-      deleteLoading.style.display = "none";
-      return;
-    }
-    alert(`${data.detail}`);
-    deleteLoading.style.display = "none";
-    location.href=`../homepages/admin-home.html`
-  } catch (err) {
-    alert(`something went Wrong: ${err}`);
-    deleteLoading.style.display = "none";
-    return;
-  }
-};
+// const deleteButton = document.getElementById("delete");
+// // console.log(deleteButton);
+// const deleteMedia = async (url) => {
+//   const deleteLoading = document.getElementById("bootstrapLoading2");
+//   deleteLoading.style.display = "inline-block";
+//   // console.log(url);
+//   const accessToken = localStorage.getItem("aamovies_accesstoken");
+//   try {
+//     const response = await fetch(url, {
+//       method: "DELETE",
+//       headers: {
+//         "content-type": "application/json",
+//         authorization: `Bearer ${accessToken}`,
+//       },
+//     });
+//     const data = await response.json();
+//     if (!response.ok) {
+//       alert(`Something Went Wrong: ${data.detail}`);
+//       deleteLoading.style.display = "none";
+//       return;
+//     }
+//     alert(`${data.detail}`);
+//     deleteLoading.style.display = "none";
+//     location.href=`../homepages/admin-home.html`
+//   } catch (err) {
+//     alert(`something went Wrong: ${err}`);
+//     deleteLoading.style.display = "none";
+//     return;
+//   }
+// };
