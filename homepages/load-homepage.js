@@ -4,7 +4,8 @@ const seriesSectionBtn = document.getElementById("FindMore-btn3");
 // console.log(trendingSectionBtn);
 
 const getUser = async () => {
-  const url = `http://localhost:3500/users/user`;
+  // const url = `http://localhost:3500/users/user`;
+  const url = `https://a-a-movies-websites-backend-server.onrender.com/users/user`;
   const accessToken = localStorage.getItem("aamovies_accesstoken");
   const response = await fetch(url, {
     headers: {
@@ -34,7 +35,8 @@ const loadHomePage = async () => {
 };
 
 const getAndSetAllMediaAdmin = async () => {
-  const url = `http://localhost:3500/media/`;
+  // const url = `http://localhost:3500/media/`;
+  const url = `https://a-a-movies-websites-backend-server.onrender.com/media/`;
 
   const response = await fetch(url);
   const data = await response.json();
@@ -67,7 +69,8 @@ const getAndSetAllMediaAdmin = async () => {
   });
 };
 const getAndSetMoviesAdmin = async () => {
-  const url = `http://localhost:3500/media/allmedia/movies/`;
+  // const url = `http://localhost:3500/media/allmedia/movies/`;
+  const url = `https://a-a-movies-websites-backend-server.onrender.com/media/allmedia/movies/`;
 
   const response = await fetch(url);
   const data = await response.json();
@@ -100,7 +103,8 @@ const getAndSetMoviesAdmin = async () => {
   });
 };
 const getAndSetSeriesAdmin = async () => {
-  const url = `http://localhost:3500/media/allmedia/series`;
+  // const url = `http://localhost:3500/media/allmedia/series`;
+  const url = `https://a-a-movies-websites-backend-server.onrender.com/media/allmedia/series`;
 
   const response = await fetch(url);
   const data = await response.json();
@@ -134,7 +138,8 @@ const getAndSetSeriesAdmin = async () => {
 };
 
 const getAndSetAllMedia = async () => {
-  const url = `http://localhost:3500/media/`;
+  // const url = `http://localhost:3500/media/`;
+  const url = `https://a-a-movies-websites-backend-server.onrender.com/media/`;
 
   const response = await fetch(url);
   const data = await response.json();
@@ -167,7 +172,8 @@ const getAndSetAllMedia = async () => {
   });
 };
 const getAndSetMovies = async () => {
-  const url = `http://localhost:3500/media/allmedia/movies/`;
+  // const url = `http://localhost:3500/media/allmedia/movies/`;
+  const url = `https://a-a-movies-websites-backend-server.onrender.com/media/allmedia/movies/`;
 
   const response = await fetch(url);
   const data = await response.json();
@@ -200,7 +206,8 @@ const getAndSetMovies = async () => {
   });
 };
 const getAndSetSeries = async () => {
-  const url = `http://localhost:3500/media/allmedia/series`;
+  // const url = `http://localhost:3500/media/allmedia/series`;
+  const url = `https://a-a-movies-websites-backend-server.onrender.com/media/allmedia/series`;
 
   const response = await fetch(url);
   const data = await response.json();

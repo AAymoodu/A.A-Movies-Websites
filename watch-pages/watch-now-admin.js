@@ -55,7 +55,8 @@ const getUrl = () => {
   const params = new URLSearchParams(window.location.search);
   const mediaId = params.get("id");
   //   console.log(mediaId);
-  return { url: `http://localhost:3500/media/${mediaId}`, id: mediaId };
+  // return { url: `http://localhost:3500/media/${mediaId}`, id: mediaId };
+  return { url: `https://a-a-movies-websites-backend-server.onrender.com/media/${mediaId}`, id: mediaId };
 };
 
 const getMedia = async (url) => {
@@ -252,7 +253,8 @@ const editMedia = async (data) => {
 
   const params = new URLSearchParams(window.location.search);
   const mediaId = params.get("id");
-  const url = `http://localhost:3500/media/${mediaId}`;
+  // const url = `http://localhost:3500/media/${mediaId}`;
+  const url = `https://a-a-movies-websites-backend-server.onrender.com/media/${mediaId}`;
 
   // console.log(data);
   const posterValue = document.getElementById("poster").value;

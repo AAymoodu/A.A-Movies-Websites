@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 const getUserDetails = async () => {
   const accessToken = localStorage.getItem("aamovies_accesstoken");
   // console.log(accessToken);
-  const url = `http://localhost:3500/users/user`;
+  // const url = `http://localhost:3500/users/user`;
+  const url = `https://a-a-movies-websites-backend-server.onrender.com/users/user`;
   const adminName = document.getElementById("admin-name");
 
   try {

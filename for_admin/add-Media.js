@@ -122,7 +122,8 @@ const formCompleted = async () => {
   //   console.log(error_Array);
 
   if (error_Array.every((error) => error.textContent == "")) {
-    const url = `http://localhost:3500/media/addmedia`;
+    // const url = `http://localhost:3500/media/addmedia`;
+    const url = `https://a-a-movies-websites-backend-server.onrender.com/media/addmedia`;
 
     const poster = document.getElementById("poster").value;
     const name = document.getElementById("name").value;

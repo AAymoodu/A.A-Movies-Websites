@@ -49,7 +49,8 @@ const formCompleted = async () => {
 
   if (error_Array.every((value) => value.textContent == "")) {
     try {
-      const url = `http://localhost:3500/users/signup`;
+      // const url = `http://localhost:3500/users/signup`;
+      const url = `https://a-a-movies-websites-backend-server.onrender.com/users/signup`;
 
       const fullname_input = document.querySelector("#fullname").value;
       const email_input = document.querySelector("#email").value;

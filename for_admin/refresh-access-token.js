@@ -12,7 +12,8 @@ const refreshAccessTokenFunction = async () => {
     location.href = "../login.html";
     return;
   }
-  const url = `http://localhost:3500/users/accesstoken`;
+  // const url = `http://localhost:3500/users/accesstoken`;
+  const url = `https://a-a-movies-websites-backend-server.onrender.com/users/accesstoken`;
   const payload = {
     refreshToken,
   };
