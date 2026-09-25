@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Now Watching: <span></span></title>
+    <title>Now Watching: </title>
     <link rel="stylesheet" href="../CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="../watch-pages/watch-now.css" />
     <link
@@ -622,15 +622,7 @@
       <section class="col-12 col-lg-3" id="comment-column">
         <h1 class="mt-5 mb-4">Media Control Panel:</h1>
 
-        <form action="" class="d-flex flex-column" id="comment-form">
-          <label for="username">UserName</label>
-          <input class="mb-4" type="text" id="username" name="username" />
-
-          <label for="comment">Comment</label>
-          <textarea name="comment" id="comment"></textarea>
-
-          <button class="btn btn-primary w-50 my-4" type="submit">Post</button>
-        </form>
+      
 
         <form action="" id="edit-media-form">
           <div class="edit-inputs" id="poster-input">
@@ -679,6 +671,15 @@
             <span role="status">Edit</span>
             <span
               id="bootstrapLoading"
+              class="spinner-border spinner-border"
+              aria-hidden="true"
+              style="width: 3rem; height: 3rem; display: none"
+            ></span>
+          </button>
+          <button id="delete" class="btn btn-danger my-1 my-md-4">
+            <span role="status">Delete</span>
+            <span
+              id="bootstrapLoading2"
               class="spinner-border spinner-border"
               aria-hidden="true"
               style="width: 3rem; height: 3rem; display: none"
@@ -766,7 +767,7 @@
     <script src="../for_admin/refresh-access-token.js"></script>
     <script src="../JS/bootstrap.min.js"></script>
     <script src="../for_admin/fetch-admin.js"></script>
-    <script src="../watch-pages/fetch-media.js"></script>
+    <script src="../watch-pages/watch-now.js"></script>
     <script src="../homepages/homepage.js"></script>
     <script src="../video-playing-script.js"></script>
   </body>

@@ -16,35 +16,46 @@ addEpisodeBtn.addEventListener("click", (btnEvent) => {
 });
 
 const deleteEpisodeBtn = document.getElementById("delete-episode");
+// deleteEpisodeBtn.addEventListener("click", (btnEvent) => {
+//   btnEvent.preventDefault();
+//   const episodes = [...document.querySelectorAll(".episode input")];
+//   const deletingEpisode = episodes.map((episode) => episode.value);
+//   deletingEpisode.pop();
+
+//   const episodeList = document.getElementById("episode-list");
+//   episodeList.innerHTML = ``;
+//   deletingEpisode.forEach((episode) => {
+//     const episodeNumber = deletingEpisode.indexOf(episode) + 1;
+//     // console.log(episodeNumber);
+
+//     const episodeDiv = document.createElement("div");
+//     episodeDiv.classList.add("episode");
+//     episodeDiv.innerHTML = `  <label for="episode${episodeNumber}"
+//                 >ep <span class="episode-number">${episodeNumber}</span>:</label
+//               >
+//               <input id="episode${episodeNumber}" type="text" />`;
+//     episodeList.append(episodeDiv);
+//     const episodeInput = document.getElementById(`episode${episodeNumber}`);
+//     // console.log(episodeInput);
+//     episodeInput.value = `${episode}`;
+//   });
+// });
+
 deleteEpisodeBtn.addEventListener("click", (btnEvent) => {
   btnEvent.preventDefault();
-  const episodes = [...document.querySelectorAll(".episode input")];
-  const deletingEpisode = episodes.map((episode) => episode.value);
-  deletingEpisode.pop();
+  const episodes = [...document.querySelectorAll(".episode")];
+  // console.log(episodes);
 
-  const episodeList = document.getElementById("episode-list");
-  episodeList.innerHTML = ``;
-  deletingEpisode.forEach((episode) => {
-    const episodeNumber = deletingEpisode.indexOf(episode) + 1;
-    // console.log(episodeNumber);
-
-    const episodeDiv = document.createElement("div");
-    episodeDiv.classList.add("episode");
-    episodeDiv.innerHTML = `  <label for="episode${episodeNumber}"
-                >ep <span class="episode-number">${episodeNumber}</span>:</label
-              >
-              <input id="episode${episodeNumber}" type="text" />`;
-    episodeList.append(episodeDiv);
-    const episodeInput = document.getElementById(`episode${episodeNumber}`);
-    // console.log(episodeInput);
-    episodeInput.value = `${episode}`;
-  });
+  const lastEpisode = episodes.at(-1);
+  // console.log(lastEpisode);
+  lastEpisode.remove();
 });
+
 const getUrl = () => {
   const params = new URLSearchParams(window.location.search);
   const mediaId = params.get("id");
   //   console.log(mediaId);
-  return `http://localhost:3500/media/${mediaId}`;
+  return { url: `http://localhost:3500/media/${mediaId}`, id: mediaId };
 };
 
 const getMedia = async (url) => {
@@ -70,6 +81,7 @@ const getMedia = async (url) => {
 };
 
 const setMedia = (data) => {
+  const title = document.querySelector("title");
   const pillTab = document.getElementById("pills-tab");
   const videoContainer = document.getElementById("video_Container");
   const poster = document.getElementById("media-poster");
@@ -78,6 +90,8 @@ const setMedia = (data) => {
   const type = document.getElementById("media-type");
   const episodes = [...data.media.episodes];
   // console.log(episodes);
+
+  title.innerText = `Now Watching: ${data.media.name}`;
 
   poster.setAttribute("src", data.media.poster);
   name.textContent = `${data.media.name}`;
@@ -213,16 +227,20 @@ const videoPlayingScript = () => {
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const url = getUrl();
+  const { url, id } = getUrl();
   const data = await getMedia(url);
   // console.log(data);
   setMedia(data);
-  videoPlayingScript();
+  // videoPlayingScript();
   setEditMedia(data);
 
   editButton.addEventListener("click", (btnEvent) => {
     btnEvent.preventDefault();
     editMedia(data);
+  });
+  deleteButton.addEventListener("click", (btnEvent) => {
+    btnEvent.preventDefault();
+    deleteMedia(url);
   });
 });
 
@@ -254,7 +272,7 @@ const editMedia = async (data) => {
       episodes,
     };
 
-    console.log(payload);
+    // console.log(payload);
     const accessToken = localStorage.getItem("aamovies_accesstoken");
     // console.log(accessToken);
     try {
@@ -274,7 +292,7 @@ const editMedia = async (data) => {
         return;
       }
 
-      console.log(editedData);
+      // console.log(editedData);
       alert(`${editedData.detail}`);
       loading.style.display = "none";
       const id = editedData.media._id;
@@ -294,7 +312,7 @@ const editMedia = async (data) => {
       episodes,
     };
 
-    console.log(payload);
+    // console.log(payload);
     const accessToken = localStorage.getItem("aamovies_accesstoken");
     // console.log(accessToken);
     try {
@@ -314,7 +332,7 @@ const editMedia = async (data) => {
         return;
       }
 
-      console.log(editedData);
+      // console.log(editedData);
       alert(`${editedData.detail}`);
       loading.style.display = "none";
       const id = editedData.media._id;
@@ -325,5 +343,36 @@ const editMedia = async (data) => {
       loading.style.display = "none";
       return;
     }
+  }
+};
+
+const deleteButton = document.getElementById("delete");
+// console.log(deleteButton);
+const deleteMedia = async (url) => {
+  const deleteLoading = document.getElementById("bootstrapLoading2");
+  deleteLoading.style.display = "inline-block";
+  // console.log(url);
+  const accessToken = localStorage.getItem("aamovies_accesstoken");
+  try {
+    const response = await fetch(url, {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+        authorization: `Bearer ${accessToken}`,
+      },
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      alert(`Something Went Wrong: ${data.detail}`);
+      deleteLoading.style.display = "none";
+      return;
+    }
+    alert(`${data.detail}`);
+    deleteLoading.style.display = "none";
+    location.href=`../homepages/admin-home.html`
+  } catch (err) {
+    alert(`something went Wrong: ${err}`);
+    deleteLoading.style.display = "none";
+    return;
   }
 };
