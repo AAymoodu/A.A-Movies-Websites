@@ -9,7 +9,7 @@ const refreshTokenAtIntervals = () => {
 const refreshAccessTokenFunction = async () => {
   const refreshToken = localStorage.getItem("aamovies_refreshtoken");
   if (!refreshToken) {
-    location.href = "./login.html";
+    location.href = "../login.html";
     return;
   }
   const url = `http://localhost:3500/users/accesstoken`;
@@ -28,17 +28,17 @@ const refreshAccessTokenFunction = async () => {
     if (!response.ok) {
       if (response.status == 401) {
         alert(`${data.detail}`);
-        location.href = "./login.html";
+        location.href = "../login.html";
         return;
       }
       if (response.status == 404) {
         alert(`${data.detail}`);
-        location.href = "./login.html";
+        location.href = "../login.html";
         return;
       }
       //   Something Went Wrong
       alert(`${data.detail}`);
-      location.href = "./login.html";
+      location.href = "../login.html";
       return;
     }
     console.log(data);

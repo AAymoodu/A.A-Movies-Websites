@@ -165,11 +165,18 @@
               alt=""
             /><span></span><a class="nav-link" href="#">History</a>
           </li>
+          <li class="nav-item">
+            <img
+              src="../Assets/Icons/Home-navigation icons/icons8-logout-48.png"
+              alt=""
+            /><span></span
+            ><a class="nav-link" href="#" id="logout-desktop">Logout</a>
+          </li>
         </ul>
       </section>
       <!-- Side Navigation for Desktop devices👆 -->
 
-      <!-- Side Navigation for Mobile and tablet devices👇👆 -->
+      <!-- Side Navigation for Mobile and tablet devices👇 -->
       <div
         style="width: 75%"
         class="offcanvas offcanvas-start p-0"
@@ -250,7 +257,13 @@
                 /><span></span
                 ><a class="nav-link" href="#">TV Shows / Series</a>
               </li>
-
+              <li class="nav-item">
+                <img
+                  src="../Assets/Icons/Home-navigation icons/icons8-logout-48.png"
+                  alt=""
+                /><span></span
+                ><a class="nav-link" href="#" id="logout-mobile">Logout</a>
+              </li>
               <li class="nav-item">
                 <img
                   src="../Assets/Icons/Home-navigation icons/icons8-time-machine-50.png"
@@ -265,7 +278,7 @@
           </p>
         </div>
       </div>
-      <!-- Side Navigation for Mobile and tablet devices👇👆 -->
+      <!-- Side Navigation for Mobile and tablet devices👆 -->
 
       <section class="col-8" id="main-page">
         <!-- Log in Form Section👇 -->
@@ -295,18 +308,21 @@
             <div class="media-inputs" id="type-input">
               <label for="media-type">Type:</label>
               <select name="media-type" id="media-type">
-                <option value="" selected disabled>-- Choose an option --</option>
+                <option value="" selected disabled>
+                  -- Choose an option --
+                </option>
                 <option value="Movie">Movie</option>
                 <option value="Series">Series</option>
               </select>
               <p class="error" id="type-err"></p>
             </div>
 
-            
             <h2 class="mb-0">Episodes:</h2>
-            <div id="episode-controller" class="input-group"
-             style="display: none;"
-             >
+            <div
+              id="episode-controller"
+              class="input-group"
+              style="display: none"
+            >
               <input
                 id="episode-controller-input"
                 type="text"
@@ -315,7 +331,9 @@
                 aria-label="number of episodes"
                 aria-describedby="number of episodes"
               />
-              <button class="btn btn-primary" id="episode-controller-button">create</button>
+              <button class="btn btn-primary" id="episode-controller-button">
+                create
+              </button>
             </div>
 
             <div id="episode-list" class="bg-dark text-light">
@@ -326,8 +344,6 @@
                 <input id="episode1" type="text" />
               </div> -->
             </div>
-
-  
 
             <button
               id="Submit"
@@ -427,7 +443,7 @@
     <script src="refresh-access-token.js"></script>
     <script src="../for_admin/addPage.js"></script>
     <script src="../for_admin/fetch-admin.js"></script>
-     <script src="../for_admin/add-Media.js"></script>
+    <script src="../for_admin/add-Media.js"></script>
     <script src="../JS/bootstrap.min.js"></script>
   </body>
 </html>

@@ -26,3 +26,20 @@ const sideNavigation_imgButton = document.querySelectorAll(
 sideNavigation_imgButton.forEach((image) => {
   image.addEventListener("click", collapseSideNav);
 });
+
+const logOutDesktop = document.getElementById("logout-desktop");
+const logOutMobile = document.getElementById("logout-mobile");
+console.log(logOutDesktop);
+console.log(logOutMobile);
+
+logOutDesktop.addEventListener("click", (ev) => {
+  ev.preventDefault();
+  localStorage.clear();
+  location.href = "../index.html";
+});
+
+logOutMobile.addEventListener("click", (ev) => {
+  ev.preventDefault();
+  localStorage.clear();
+  location.href = "../index.html";
+});
