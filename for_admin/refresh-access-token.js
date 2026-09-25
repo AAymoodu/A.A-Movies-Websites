@@ -3,7 +3,7 @@ const refreshTokenAtIntervals = () => {
 
   setInterval(() => {
     refreshAccessTokenFunction();
-  }, 1080000);
+  }, 600000);
 };
 
 const refreshAccessTokenFunction = async () => {
