@@ -153,6 +153,19 @@ div.card-body > img {
 div.card-footer {
   font-size: 1.5rem;
   max-width: 15rem;
+  max-height: 5.55rem;
+  overflow: auto;
+
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.card-footer::-webkit-scrollbar {
+  display: none;
 }
 
 /*  */
@@ -276,6 +289,16 @@ footer#footer {
 #hamburger3 {
   font-size: 1.5rem;
 }
+.bi.bi-person-circle {
+  font-size: 5rem;
+  color: var(--AAMovies-green);
+}
+div.navbar-brand {
+  gap: 3rem;
+}
+.row > * {
+  padding-right: 0;
+}
 @media (max-width: 1100px) {
   #Side-navigation ul li,
   #Side-navigation-mobile ul li {
@@ -309,16 +332,19 @@ footer#footer {
 }
 
 @media (max-width: 576px) {
-  .container-fluid{
-    padding-right: 0;
-    padding-left: 0;
+  .container-fluid {
+    /* padding-right: 0;
+    padding-left: 0; */
+    padding: 0 0.5rem;
   }
   div.card-body > img {
-    width: 10rem;
-    height: 16.5rem;
+    /* width: 10rem; */
+    width: stretch;
+    max-height: 13rem;
   }
   div.card {
-    width: fit-content;
+    max-width: 10rem;
+    /* width: fit-content; */
     /* height: fit-content; */
   }
   button#FindMore-btn2,
@@ -326,7 +352,7 @@ footer#footer {
     height: auto;
   }
   div#Trending-section-grid {
-    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
     column-gap: 1.1rem;
   }
   button#FindMore-btn1 {
@@ -346,5 +372,20 @@ footer#footer {
   div#Trending-section-grid {
     height: 21rem;
     margin-bottom: 2rem;
+  }
+  .bi.bi-person-circle {
+    font-size: 3rem;
+  }
+  div.navbar-brand {
+    gap: 1.5rem;
+  }
+  div.card-footer {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  div.card {
+    max-width: 8.5rem;
   }
 }
